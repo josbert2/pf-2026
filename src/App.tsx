@@ -1,6 +1,8 @@
 import { LayoutGroup, motion } from "motion/react"
 import { useState } from "react"
 import TextRotate from "./components/TextRotate"
+import Logo from "./components/Logo"
+import Navbar from "./components/Navbar"
 
 // Colores flat/suaves para cada palabra
 const colors = [
@@ -16,24 +18,23 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
+      {/* Navbar */}
+      <Navbar />
+      
       {/* Hero Section */}
       <header className="relative">
         <div className="mx-auto max-w-6xl px-6 py-32 lg:py-48">
           <div className="max-w-3xl">
             {/* Logo & Name */}
             <div className="mb-8 flex items-center gap-4">
-              <img 
-                src="/logo.svg" 
-                alt="voidowl logo" 
-                className="h-16 w-16"
-              />
+              <Logo className="h-16 w-16" />
               <span className="text-2xl font-medium tracking-tight text-[var(--color-text-primary)]">
                 voidowl
               </span>
             </div>
             
             {/* Label */}
-            <span className="text-label mb-4 block">
+            <span className="text-label text-[#414158] mb-4 block">
               Software Developer
             </span>
             
@@ -88,13 +89,13 @@ function App() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="#work"
-                className="inline-flex items-center justify-center rounded-xl bg-[var(--color-text-primary)] px-6 py-3 text-sm font-medium text-[var(--color-bg)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                className="inline-flex items-center justify-center rounded-[14px] bg-[var(--color-text-primary)] px-6 py-3 text-sm font-medium text-[var(--color-bg)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
               >
                 View Work
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-xl border border-[var(--color-border)] bg-transparent px-6 py-3 text-sm font-medium text-[var(--color-text-primary)] transition-all duration-200 hover:border-[var(--color-border-hover)] hover:bg-[var(--color-bg-elevated)]"
+                className="inline-flex text-[#042A4D] items-center justify-center rounded-[14px] border border-[var(--color-border)] bg-transparent px-6 py-3 text-sm font-medium text-[var(--color-text-primary)] transition-all duration-200 hover:border-[var(--color-border-hover)] hover:bg-[var(--color-bg-elevated)]"
               >
                 Get in Touch
               </a>
