@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Caveat:wght@400..700&family=Geist+Mono:wght@100..900&display=swap');
+@import "tailwindcss";
+
+/* --- DM Sans --- */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Wp2ywxg089UriCZaSExd86J3t9jz86MvyyKK58VXh.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2) format('woff2');
+}
+
+/* --- IBM Plex Sans --- */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsans/v23/zYXGKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1swZSAXcomDVmadSDDV5DB6g4.woff2) format('woff2');
+}
+
+/* --- Rubik --- */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v31/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FV0U1.woff2) format('woff2');
+}
+
+/* --- Averia Serif Libre --- */
+@font-face {
+  font-family: 'Averia Serif Libre';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/averiaseriflibre/v19/neIWzD2ms4wxr6GvjeD0X88SHPyX2xYOoguP.woff2) format('woff2');
+}
+
+/* --- Delicious Handrawn --- */
+@font-face {
+  font-family: 'Delicious Handrawn';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/delicioushandrawn/v10/wlpsgx_NAUNkpmKQifcxkQchDFo3fJ1F25BC.woff2) format('woff2');
+}
+
+/* --- Geist Mono --- */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/geistmono/v4/or3yQ6H-1_WfwkMZI_qYPLs1a-t7PU0AbeE9KK5U5Ck.woff2) format('woff2');
+}
+
+/* --- JetBrains Mono --- */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2) format('woff2');
+}
+
+/* --- Lilita One --- */
+@font-face {
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lilitaone/v17/i7dPIFZ9Zz-WBtRtedDbYEF8RQ.woff2) format('woff2');
+}
+
+/* --- Awesome Serif --- */
+@font-face { font-family: "Awesome Serif Tall"; src: url("https://framerusercontent.com/assets/N2ArrH09gjgjTNCCXKAdW2TdE.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
+@font-face { font-family: "Awesome Serif Regular"; src: url("https://framerusercontent.com/assets/MniN0KGddYSqaVLm5RLF1RyPuw.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
+@font-face { font-family: "Awesome Serif Bold Regular"; src: url("https://framerusercontent.com/assets/yLFGRiTO2wTznoxTmnkvGnOwhUM.woff2"); font-display: swap; font-style: normal; font-weight: 700 }
+
+/* --- Departure Mono --- */
+@font-face { font-family: "Departure Mono Regular"; src: url("https://framerusercontent.com/assets/6xvpVClQT7SKWyqlm4DCB8L8Y.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
+
+/* --- Inter --- */
+@font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2"); font-display: swap; font-style: normal; font-weight: 400; }
+
+@theme {
+  --font-serif: "Instrument Serif", serif;
+  --font-handwriting: "Caveat", cursive;
+  --font-mono: "Geist Mono", monospace;
+  --font-times: "Times New Roman", "Times", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --font-dm: "DM Sans", sans-serif;
+  --font-ibm: "IBM Plex Sans", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --font-averia: "Averia Serif Libre", serif;
+  --font-delicious: "Delicious Handrawn", cursive;
+  --font-awesome: "Awesome Serif Regular", serif;
+  --font-departure: "Departure Mono Regular", monospace;
+  --font-jetbrains: "JetBrains Mono", monospace;
+  --font-lilita: "Lilita One", cursive;
+  --font-gochi: "Gochi Hand", cursive;
+  --font-lexend: "Lexend", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  
+  --color-ink: #212121;
+  --color-paper: #F5E6D3;
+  --color-accent-red: #D25E4D;
+  --color-grid-blue: #B5D2E8;
+  --color-dark-bg: #212121;
+
+  --spacing-section: 6rem;
+}
+
+:root {
+  /* Neutral Dark Background (Desk Surface) */
+  --bg-desk: var(--color-dark-bg);
+  /* The Paper */
+  --bg-paper: var(--color-paper);
+  /* Text */
+  --text-ink: var(--color-ink);
+  --text-light: #F5E6D3;
+  
+  /* Accents */
+  --accent-red: var(--color-accent-red);
+  --grid-blue: var(--color-grid-blue);
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--bg-desk);
+  color: var(--text-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
+  background-size: 153px;
+  background-repeat: repeat;
+  opacity: 0.1;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: rgba(210, 94, 77, 0.4);
+  color: inherit;
+}
+
+/* Custom Scrollbar for the desktop feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-desk);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-ink);
+  border: 2px solid var(--bg-desk);
+  border-radius: 6px;
+}
+
+/* 
+  GRAPH PAPER PATTERN
+  Creates a blueprint/grid paper aesthetic for the notebook
+*/
+.bg-graph-paper {
+  background-color: var(--bg-paper);
+  background-image: 
+    linear-gradient(var(--grid-blue) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-blue) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/*
+  POLAROID EFFECT
+  For project cards
+*/
+.polaroid {
+  background: white;
+  padding: 12px 12px 40px 12px;
+  box-shadow: 
+    2px 4px 12px rgba(0,0,0,0.15),
+    -1px -1px 2px rgba(0,0,0,0.05);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg) !important;
+  z-index: 50;
+  box-shadow: 
+    4px 12px 24px rgba(0,0,0,0.25),
+    -2px -2px 4px rgba(0,0,0,0.05);
+}
+
+/* Hand-drawn underline utility */
+.hand-underline {
+  position: relative;
+  display: inline-block;
+}
+.hand-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: -2%;
+  width: 104%;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q50,0 100,8 Q50,4 0,7' stroke='%23D25E4D' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Utility classes mapping back to our theme */
+.text-ink { color: var(--text-ink); }
+.bg-paper { background-color: var(--bg-paper); }
+.text-accent { color: var(--accent-red); }
+
+/*
+  FRAMER SCALE WRAP
+  Framer exports have fixed pixel widths (1335px). Use `zoom` to scale them
+  down proportionally on narrower viewports — it reflows naturally (unlike
+  transform: scale which leaves empty space).
+*/
+.framer-scale-wrap {
+  width: 1335px;
+  max-width: 100%;
+}
+@media (max-width: 1400px) { .framer-scale-wrap { zoom: 0.92; } }
+@media (max-width: 1200px) { .framer-scale-wrap { zoom: 0.8;  } }
+@media (max-width: 1000px) { .framer-scale-wrap { zoom: 0.65; } }
+@media (max-width: 768px)  { .framer-scale-wrap { zoom: 0.5;  } }
+@media (max-width: 500px)  { .framer-scale-wrap { zoom: 0.35; } }
+
+.framer-1hjpp53 {
+    background: linear-gradient(180deg, #f5e1ce 0%, var(--token-9d6e4be8-f5be-4ce8-81f8-c572021c0846, #e35342) 62%);
+    border-radius: 62px;
+    flex-flow: row;
+    flex: 1 0 0;
+    place-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 40%;
+    
+    position: absolute;
+    top: -9px;
+    left: 0;
+    transform: scale(1.029);
+}
+
+.framer-wud5gd{
+  aspect-ratio: 2.28099;
+  height: var(--framer-aspect-ratio-supported, 82px);
+  flex: none;
+  width: 226px;
+  position: absolute;
+  bottom: 32px;
+  left: 27px;
+  overflow: visible;
+  z-index: 9999;
+}
+
+.framer-hbq7c8 {
+       aspect-ratio: .930736;
+    height: var(--framer-aspect-ratio-supported, 163px);
+    flex: none;
+    width: 151px;
+    position: absolute;
+    bottom: 34px;
+    right: 33px;
+    overflow: visible;
+        z-index: 999;
+}

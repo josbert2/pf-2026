@@ -1,0 +1,42 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules/
+.next/
+
+build/
+.env
+dist
+dist-ssr
+*.local
+
+# Python venv (pesa 160 MB, contiene binarios > 100 MB de GitHub)
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Carpetas de clones generados (regenerables con extract-p.py)
+clone/
+clone-full/
+
+# Vite cache
+.vite/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

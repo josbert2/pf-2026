@@ -1,0 +1,90 @@
+{
+  "title": "Places I've been, things I've learnt",
+  "labels": {
+    "notable_work": "Notable work",
+    "side_quests": "Side Quests"
+  },
+  "projects": [
+    {
+      "id": "bash",
+      "name": "Bash",
+      "url": "https://bash.com",
+      "tagline": "South Africa's largest omni-channel fashion and lifestyle shopping platform",
+      "lesson": "Learnt to think beyond what's expected",
+      "notable_work": ["BashPay", "Internal Packing Tool", "Kiosk", "Point of Sale"],
+      "highlight": "Payment portal that increased payment success rate to"
+    },
+    {
+      "id": "pulse",
+      "name": "Pulse",
+      "url": "https://www.linkedin.com/company/pulseliveco/",
+      "tagline_l1": "Watch the race from the athletes",
+      "tagline_l2": "point of view",
+      "lesson": "Learnt that design is a team's sports that involves people outside of design",
+      "notable_work": ["Stream uploader", "Home feed", "Race platform", "Event timeline"],
+      "highlight": "Enabled athletes to easily upload their GoPro footages onto the app"
+    },
+    {
+      "id": "heygo",
+      "name": "HEYGO",
+      "url": "https://www.linkedin.com/company/virtualtrips/",
+      "year": "2020",
+      "tagline_l1": "Visit interesting places around the world through the",
+      "tagline_l2": "eyes of a professional tour guide!",
+      "tagline_l3": "Discover wonders and learn more all from the comfort of your home",
+      "lesson": "Learnt design is a powerful alignment tool",
+      "notable_work": ["Streaming UI", "Strream creator"]
+    },
+    {
+      "id": "dotslash",
+      "name": "Dotslash",
+      "url": "https://dotslash.co.za/",
+      "tagline_l1": "Digital transformation agency",
+      "tagline_l2": "Helping businesses thrive in the digital landscape.",
+      "lesson": "Learnt how to make a good design, great.",
+      "notable_work": ["Dekra", "Balwin Fibre", "Junk Mail", "+4 other large projects..."]
+    }
+  ],
+  "side_quests": [
+    {
+      "id": "drift",
+      "name": "Drift",
+      "role": "Design & Code creator",
+      "description": "Personal library of images that you found online or created",
+      "url": null,
+      "year": null
+    },
+    {
+      "id": "tf2048",
+      "name": "TF2048",
+      "role": "Bot design & Site design & Concept art & 3D Modelling and texturing",
+      "description": "Puzzle based NFT",
+      "url": "https://tf2048.io/",
+      "year": "2021"
+    },
+    {
+      "id": "whos-speaking",
+      "name": "Who's Speaking",
+      "role": "Designer & Framer Developer",
+      "description": "Follow speakers and see where they are going to be speakign",
+      "url": "https://whosspeaking.framer.website/",
+      "year": null
+    },
+    {
+      "id": "triple-time",
+      "name": "Triple Time",
+      "role": "Product Designer & Motion designer",
+      "description": "AI powered medical note taker for doctors",
+      "url": "https://tripletime.ai/en-US",
+      "year": "2025"
+    },
+    {
+      "id": "resqued",
+      "name": "ResQued",
+      "role": "Founding Product Designer",
+      "description": "Helping ordinary people deliver extraordinary acts of kindness",
+      "url": "https://www.resqued.org/",
+      "year": null
+    }
+  ]
+}

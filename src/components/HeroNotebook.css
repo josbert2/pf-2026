@@ -1,0 +1,274 @@
+/* --- Hero Notebook Styles from Framer Snippet --- */
+
+.hero-notebook-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 932px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* 📖 Book container */
+.book-container {
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 100%;
+  max-width: 932px;
+  height: auto;
+  min-height: 1236px;
+  padding: 0px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Top page container - for rim light */
+.top-page-binder {
+  background: linear-gradient(180deg, #f5e1ce 0%, #e35342 62%);
+  border-radius: 62px;
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 600px;
+  padding: 2px;
+  position: relative;
+  overflow: visible;
+  transform: perspective(4105px) rotateX(-5deg);
+  transform-origin: 50% 100%;
+}
+
+/* Top Page (Leather Binder) */
+.leather-top {
+  background-color: #e35342;
+  border-radius: 60px 60px 4px 4px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0px;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 23px 28px 1px;
+  position: relative;
+  overflow: visible;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 0.602px 0px -1.25px, 
+              rgba(0, 0, 0, 0.53) 0px 2.288px 0px -2.5px, 
+              rgba(0, 0, 0, 0.21) 0px 10px 0px -3.75px;
+}
+
+.leather-texture {
+  mix-blend-mode: multiply;
+  opacity: 0.54;
+  z-index: 1;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  position: absolute;
+  top: 0px;
+  bottom: -2px;
+  left: 0%;
+  right: 0%;
+  background-image: url('https://framerusercontent.com/images/FqqwJe3cXajmh3c17ziisS6QOJU.jpg');
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 1448px auto;
+}
+
+/* ✍️ Paper Page Top */
+.paper-page-top {
+  background-color: #f2e3cf;
+  border: 1px solid #fff6ed;
+  border-top-width: 1px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  border-radius: 20px 20px 4px 4px;
+  flex: 1 0 0px;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+.paper-grid {
+  position: absolute;
+  inset: 0px;
+  opacity: 0.29;
+  z-index: 0;
+  background-image: url('https://framerusercontent.com/images/fiStjr6PCyart5FAr44gZdenfA.png');
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: 41.5px auto;
+  mask-image: linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 55%);
+}
+
+.paper-vfx-gradient {
+  position: absolute;
+  inset: 0px;
+  opacity: 0.41;
+  background: linear-gradient(rgba(224, 224, 224, 0) 0%, 
+                              rgba(237, 226, 216, 0.64) 5%, 
+                              rgba(230, 230, 229, 0.03) 24%, 
+                              rgba(230, 230, 230, 0) 89%, 
+                              rgba(23, 15, 6, 0.17) 98%, 
+                              rgba(26, 15, 4, 0.88) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Binder / Crease */
+.binder-crease {
+  height: 63px;
+  background-color: rgb(194, 66, 52);
+  border-radius: 3px;
+  width: 100.5%;
+  position: relative;
+  z-index: 10;
+  margin: -31px 0;
+}
+
+/* Bottom Page Container */
+.bottom-page-binder {
+  background-color: #e35342;
+  height: 600px;
+  border-radius: 2px 2px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 1px 28px 28px;
+  position: relative;
+  z-index: 1;
+  transform: perspective(3310px) rotateX(10deg);
+  transform-origin: 50% 0%;
+  box-shadow: rgba(0, 0, 0, 0.6) 0.602px 0px -1.25px, 
+              rgba(0, 0, 0, 0.53) 2.288px 0px -2.5px, 
+              rgba(0, 0, 0, 0.21) 10px 0px -3.75px;
+}
+
+/* Paper Page Bottom */
+.paper-page-bottom {
+  background-color: #f2e3cf;
+  height: 100%;
+  border-radius: 4px 4px 20px 20px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.47) 0px 4px 5px 2px;
+}
+
+.paper-vfx-gradient-bottom {
+  opacity: 0.41;
+  height: 589px;
+  background: linear-gradient(rgba(26, 15, 4, 0.88) 0%, 
+                              rgba(23, 15, 6, 0.17) 2%, 
+                              rgba(230, 230, 230, 0) 6%, 
+                              rgba(230, 230, 229, 0.03) 18%, 
+                              rgba(230, 230, 229, 0.03) 28%, 
+                              rgba(237, 226, 216, 0.64) 37%, 
+                              rgba(224, 224, 224, 0) 69%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+/* Ribbons */
+.ribbon-left {
+  height: 41px;
+  width: 88px;
+  position: absolute;
+  bottom: -17px;
+  left: -60px;
+  z-index: 20;
+}
+
+.ribbon-right {
+  height: 93px;
+  width: 47px;
+  position: absolute;
+  bottom: 4px;
+  right: -19px;
+  z-index: 20;
+}
+
+/* Deco Elements */
+.deco-godzilla {
+  position: absolute;
+  bottom: 71px;
+  right: 139px;
+  z-index: 0;
+  width: 155px;
+  pointer-events: none;
+}
+
+.deco-noodle {
+  position: absolute;
+  top: 46%;
+  right: 108px;
+  z-index: 0;
+  width: 131px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.deco-juicebox {
+  position: absolute;
+  bottom: 94px;
+  left: 118px;
+  z-index: 0;
+  width: 104px;
+  pointer-events: none;
+}
+
+/* Signature & Typography */
+.signature-container {
+  width: 152px;
+  height: 51px;
+  margin-bottom: 20px;
+}
+
+.product-designer-text {
+  font-family: 'Averia Serif Libre', serif;
+  font-size: 26px;
+  color: #e35342;
+  line-height: 1em;
+  display: flex;
+}
+
+.hero-title {
+  font-family: 'Awesome Serif Semi Bold Tall', serif;
+  font-size: 45px;
+  font-weight: 600;
+  color: #e35342;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.hero-title-easy {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 51px;
+  color: #e35342;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.location-text {
+  font-family: 'Averia Serif Libre', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #e35342;
+  letter-spacing: -0.04em;
+}
