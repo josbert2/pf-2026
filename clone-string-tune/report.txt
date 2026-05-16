@@ -1,0 +1,10 @@
+URL:           https://string-tune.fiddle.digital/
+Modo:          --full (clon exacto)
+Scripts:       eliminados
+Assets:        67 descargados / 67 encontrados
+  fonts: 8
+  images: 38
+  scripts: 19
+  videos: 2
+CSS bruto:     661,759 caracteres
+HTML final:    225,553 caracteres

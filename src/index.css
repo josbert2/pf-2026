@@ -248,6 +248,14 @@ body::before {
 @media (max-width: 768px)  { .framer-scale-wrap { zoom: 0.5;  } }
 @media (max-width: 500px)  { .framer-scale-wrap { zoom: 0.35; } }
 
+/* About — diseño fijo a 1190px, escala con zoom en viewports angostos */
+.about-scale-wrap { width: 1190px; max-width: 100%; }
+@media (max-width: 1280px) { .about-scale-wrap { zoom: 0.92; } }
+@media (max-width: 1120px) { .about-scale-wrap { zoom: 0.78; } }
+@media (max-width: 940px)  { .about-scale-wrap { zoom: 0.62; } }
+@media (max-width: 720px)  { .about-scale-wrap { zoom: 0.46; } }
+@media (max-width: 520px)  { .about-scale-wrap { zoom: 0.34; } }
+
 .framer-1hjpp53 {
     background: linear-gradient(180deg, #f5e1ce 0%, var(--token-9d6e4be8-f5be-4ce8-81f8-c572021c0846, #e35342) 62%);
     border-radius: 62px;

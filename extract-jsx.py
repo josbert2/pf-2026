@@ -229,8 +229,11 @@ def reactify(node, keep_framer_classes: bool, keep_default_styles: bool) -> str:
             if cls:
                 attrs.append(f'className="{cls}"')
             continue
-        if "-" in jsx_attr and not jsx_attr.startswith("data-") and not jsx_attr.startswith("aria-"):
-            jsx_attr = kebab_to_camel(jsx_attr)
+        # NO camelCasar atributos custom con guión (string-enter-vp,
+        # string-id, etc.). Los frameworks JS los leen con getAttribute(name)
+        # exacto. JSX/React 16+ los pasa al DOM tal cual si están en kebab-case.
+        # Los standard HTML/SVG con guión (viewBox, strokeWidth, etc.) ya
+        # están en ATTR_RENAME y se mapean explícitamente.
         if val == "" or val is None:
             if jsx_attr in FORCE_VALUE_ATTRS:
                 attrs.append(f'{jsx_attr}=""')
@@ -360,7 +363,11 @@ def filter_css(css_text: str, tokens: set, include_globals: bool = False,
             name = (rule.lower_at_keyword or "").lower()
             prelude = tinycss2.serialize(rule.prelude).strip()
             if rule.content is None:
-                # @import / @charset — solo si modo full
+                # @charset NUNCA — solo es válido como primer byte del archivo,
+                # múltiples (uno por cada CSS inlineado) rompen PostCSS/Tailwind.
+                if name == "charset":
+                    continue
+                # @import / otros at-rules sin content — solo en modo full
                 if include_globals:
                     out.append(serialize(rule).strip())
                 continue
@@ -383,10 +390,14 @@ def filter_css(css_text: str, tokens: set, include_globals: bool = False,
 # ============================================================
 
 def rewrite_paths(html: str, prefix: str) -> str:
-    """images/X.png → /work-clone/images/X.png (configurable)."""
-    out = re.sub(r"(?<![\w/])(images|fonts|scripts)/", rf"{prefix}/\1/", html)
-    out = out.replace(f"/{prefix}/", f"{prefix}/")  # evita dobles barras
-    return out
+    """Reescribe paths a assets a `<prefix>/...`. Cubre:
+      - bare:   images/X.png   → /prefix/images/X.png
+      - dot:    ./images/X.png → /prefix/images/X.png
+      - up:     ../images/X.png → /prefix/images/X.png
+      - root:   /images/X.png  → /prefix/images/X.png
+    Mantiene la subestructura (images/home/X.png funciona)."""
+    pattern = re.compile(r"(?:\.\./|\./|/)*(images|fonts|scripts|videos|audio)/")
+    return pattern.sub(rf"{prefix}/\1/", html)
 
 
 def deduce_component_name(class_name: str) -> str:
@@ -549,15 +560,25 @@ def main():
     if not args.clase:
         ap.error("debes pasar una clase, o usar --list")
 
-    cls = args.clase.lstrip(".")
-    matches = soup.find_all(class_=cls)
-    if not matches:
-        print(f"✗ no encontré .{cls} en {src_path}", file=sys.stderr)
-        print("   (usa --list para ver clases disponibles)", file=sys.stderr)
-        sys.exit(2)
-    if len(matches) > 1:
-        print(f"⚠ encontré {len(matches)} elementos con .{cls}, uso el primero", file=sys.stderr)
-    node = matches[0]
+    selector = args.clase
+    if selector.startswith("#"):
+        target_id = selector[1:]
+        node = soup.find(id=target_id)
+        if node is None:
+            print(f"✗ no encontré #{target_id} en {src_path}", file=sys.stderr)
+            sys.exit(2)
+        cls = f"id-{target_id}"
+        print(f"  match por ID: #{target_id}", file=sys.stderr)
+    else:
+        cls = selector.lstrip(".")
+        matches = soup.find_all(class_=cls)
+        if not matches:
+            print(f"✗ no encontré .{cls} en {src_path}", file=sys.stderr)
+            print("   (usa --list para ver clases disponibles)", file=sys.stderr)
+            sys.exit(2)
+        if len(matches) > 1:
+            print(f"⚠ encontré {len(matches)} elementos con .{cls}, uso el primero", file=sys.stderr)
+        node = matches[0]
 
     # Convertir a JSX (sobre el subárbol entero del primer match)
     jsx = reactify(node,
@@ -628,6 +649,9 @@ def main():
     css_import = f'import "./{out_path.stem}.css";\n' if css_path else ""
 
     component = (
+        f"// @ts-nocheck\n"
+        f"// Generado automáticamente: contiene atributos custom (data-v-*, string=*, etc.)\n"
+        f"// y CSS custom properties (--var) que TS no tipa estrictamente.\n"
         f'import React from "react";\n'
         f"{css_import}"
         f"\n"

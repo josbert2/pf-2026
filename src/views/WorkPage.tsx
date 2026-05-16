@@ -2,6 +2,8 @@ import HeaderTop from "../components/work/HeaderTop";
 import BashCard from "../components/work/BashCard";
 import PulseCard from "../components/work/PulseCard";
 import HeygoCard from "../components/work/HeygoCard";
+import DotslashCard from "../components/work/DotslashCard";
+import SideQuests from "../components/work/SideQuests";
 
 export default function WorkPage() {
   return (
@@ -10,6 +12,8 @@ export default function WorkPage() {
       <BashCard />
       <PulseCard />
       <HeygoCard />
+      <DotslashCard />
+      <SideQuests />
     </div>
   );
 }

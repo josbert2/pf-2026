@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-import HeroNotebook from "./components/HeroNotebook";
+import HeroNotebook from "./components/HeroNotebookAI";
 import ScatteredGallery from "./components/ScatteredGallery";
 import FooterMarquee from "./components/FooterMarquee";
 import FooterSection from "./components/FooterSection";
@@ -18,6 +18,7 @@ import AboutSection from "./components/AboutSection";
 import AboutSectionFramer from "./components/AboutSectionFramer";
 import ValuesSection from "./components/ValuesSection";
 import EmpowerSection from "./components/EmpowerSection";
+import FooterSakura from "./components/FooterSakura";
 
 import { doodles } from "./data/doodles";
 
@@ -117,8 +118,7 @@ export default function App() {
           {/* 1. THE NOTEBOOK SECTION */}
           <HeroNotebook />
 
-          {/* 2. TIRELESSLY PURSUE CLARITY */}
-          <TirelesslyPursueClarity />
+     
 
 
 
@@ -128,19 +128,8 @@ export default function App() {
         <RightSidebar />
       </div>
 
-      {/* 3. VALUES SECTION — "Design for moments" (values2, Framer export) */}
-      <div className="w-full flex justify-center overflow-hidden">
-        <div className="framer-scale-wrap">
-          <ValuesSection />
-        </div>
-      </div>
+     
 
-      {/* 4. EMPOWER SECTION — "Sofware should empower" (values3, Framer export) */}
-      <div className="w-full flex justify-center overflow-hidden">
-        <div className="framer-scale-wrap">
-          <EmpowerSection />
-        </div>
-      </div>
 
       {/* 5. ABOUT SECTION — scrapbook collage (Framer export) */}
       <div className="w-full flex justify-center py-20 overflow-hidden">
@@ -149,8 +138,8 @@ export default function App() {
         </div>
       </div>
 
-      {/* 4. FOOTER SECTION */}
-      <FooterSection />
+      {/* FOOTER — extraído de string-tune.fiddle.digital (#c-tree) */}
+      <FooterSakura />
 
     </div>
   );
