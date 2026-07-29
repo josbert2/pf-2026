@@ -44,7 +44,7 @@ export default function HeroNotebookAI() {
          </div>
 
          {/* The Paper Top Page */}
-         <div className="relative flex items-center z-10 mx-3 md:mx-6 mt-6 mb-0.5 bg-[#f2e3cf] rounded-t-[20px] rounded-b-[4px] shadow-sm overflow-hidden min-h-[450px] md:min-h-[550px] shadow-[inset_0_-4px_10px_rgba(0,0,0,0.05)]">
+         <div className="relative flex items-center z-10 mx-3 md:mx-6 mt-6 mb-0.5 bg-[#f2e3cf] rounded-t-[20px] rounded-b-[4px] shadow-sm overflow-hidden min-h-[450px] md:min-h-[550px] shadow-[inset_0_-4px_10px_rgba(0,0,0,0.05)] bg-[#f5e1cd]">
             {/* Grid Background */}
             <div
                className="absolute inset-x-0 top-0 bottom-0 opacity-[0.29] pointer-events-none z-0"

@@ -31,6 +31,7 @@ export default function AboutSectionFramer() {
           overflowY: "clip",
           position: "relative",
           width: "388px",
+          top: "17px"
         }}
       >
         <div

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useLenis } from "./lib/useLenis";
 
 import HeroNotebook from "./components/HeroNotebookAI";
 import ScatteredGallery from "./components/ScatteredGallery";
@@ -19,10 +20,13 @@ import AboutSectionFramer from "./components/AboutSectionFramer";
 import ValuesSection from "./components/ValuesSection";
 import EmpowerSection from "./components/EmpowerSection";
 import FooterSakura from "./components/FooterSakura";
+import ContactSection from "./components/ContactSection";
 
 import { doodles } from "./data/doodles";
 
 export default function App() {
+  useLenis();
+
   return (
     <div className="min-h-screen relative font-mono text-light overflow-hidden flex flex-col">
       <ClickBurst />
@@ -138,8 +142,11 @@ export default function App() {
         </div>
       </div>
 
-      {/* FOOTER — extraído de string-tune.fiddle.digital (#c-tree) */}
-      <FooterSakura />
+
+      {/* 6. Contact Section */}
+      <ContactSection />
+
+
 
     </div>
   );
