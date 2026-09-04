@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
-const LUCKY_CAT = "https://framerusercontent.com/images/f2PEJg4oioBRT5hs3v6NNeskQ.png";
-const IMG_L1    = "https://framerusercontent.com/images/Wiw196PFt5v5LcQxgcrCUB3F0.png";
-const IMG_L2    = "https://framerusercontent.com/images/JCVH1U71jmRJSgalqgIDAfuO8.png";
-const IMG_R1    = "https://framerusercontent.com/images/qPdyyjiGVcYhSJZ659iudjEFmbw.png";
-const IMG_R2    = "https://framerusercontent.com/images/JiCsfFAbrVrZSX3x7Y9dkgzckI.png";
-const SLICE_52  = "https://framerusercontent.com/images/EYbfG6roNwIxhPystqzDKOK4.png";
+const LUCKY_CAT = "/work-clone/framer/images/f2PEJg4oioBRT5hs3v6NNeskQ.png";
+const IMG_L1    = "/work-clone/framer/images/Wiw196PFt5v5LcQxgcrCUB3F0.png";
+const IMG_L2    = "/work-clone/framer/images/JCVH1U71jmRJSgalqgIDAfuO8.png";
+const IMG_R1    = "/work-clone/framer/images/qPdyyjiGVcYhSJZ659iudjEFmbw.png";
+const IMG_R2    = "/work-clone/framer/images/JiCsfFAbrVrZSX3x7Y9dkgzckI.png";
+const SLICE_52  = "/work-clone/framer/images/EYbfG6roNwIxhPystqzDKOK4.png";
 
 const CARD_SHADOW = "0px 1px 2px 0px rgba(0, 0, 0, 0.25)";
 

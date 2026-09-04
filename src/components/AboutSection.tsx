@@ -1,34 +1,34 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
-const ILUS_LEFT  = "https://framerusercontent.com/images/Bg0nbySqeUlxqYI6KKDaJ8mbJo.png"; // Slice 10 — small grass
-const ILUS_RIGHT = "https://framerusercontent.com/images/DJ6zTo2EiDMZipwzcmZgjH2tNhU.png"; // Slice 8 — character + campfire
+const ILUS_LEFT  = "/work-clone/framer/images/Bg0nbySqeUlxqYI6KKDaJ8mbJo.png"; // Slice 10 — small grass
+const ILUS_RIGHT = "/work-clone/framer/images/DJ6zTo2EiDMZipwzcmZgjH2tNhU.png"; // Slice 8 — character + campfire
 
 // Sizes taken from Framer Variant 1 children — each card has its own
 // width/height (no uniform grid). Some are portrait, some landscape.
 const POLAROIDS = [
   // Row 1
-  { src: "https://framerusercontent.com/images/SMhadH5n5CuLH7ZXJnFHzzfUI7k.png", alt: "Pack shop UI", w: 278, h: 291, rotate: -3 },
-  { src: "https://framerusercontent.com/images/ijsWM5MtUuc1y8pWtiDWBHCnuXg.png", alt: "Code editor",  w: 356, h: 269, rotate:  2 },
-  { src: "https://framerusercontent.com/images/cmpsfHDSBvMIVkOtMJffhTk8HA.png", alt: "App preview",   w: 287, h: 380, rotate:  4 },
+  { src: "/work-clone/framer/images/SMhadH5n5CuLH7ZXJnFHzzfUI7k.png", alt: "Pack shop UI", w: 278, h: 291, rotate: -3 },
+  { src: "/work-clone/framer/images/ijsWM5MtUuc1y8pWtiDWBHCnuXg.png", alt: "Code editor",  w: 356, h: 269, rotate:  2 },
+  { src: "/work-clone/framer/images/cmpsfHDSBvMIVkOtMJffhTk8HA.png", alt: "App preview",   w: 287, h: 380, rotate:  4 },
   // Row 2
   {
-    src: "https://framerusercontent.com/images/OqvkDghj18vNLRheWfCb9I9ZC5M.png",
+    src: "/work-clone/framer/images/OqvkDghj18vNLRheWfCb9I9ZC5M.png",
     alt: "Who's Speaking",
     href: "https://whosspeaking.framer.website/",
     w: 400, h: 240, rotate: -5,
   },
-  { src: "https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png", alt: "Calendar",       w: 327, h: 285, rotate:  1 },
-  { src: "https://framerusercontent.com/images/HUqtxwLIEIp2z66d1Rbksv2PbbY.png", alt: "Audio waveform", w: 369, h: 220, rotate:  3 },
+  { src: "/work-clone/framer/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png", alt: "Calendar",       w: 327, h: 285, rotate:  1 },
+  { src: "/work-clone/framer/images/HUqtxwLIEIp2z66d1Rbksv2PbbY.png", alt: "Audio waveform", w: 369, h: 220, rotate:  3 },
   // Row 3
-  { src: "https://framerusercontent.com/images/Wiw196PFt5v5LcQxgcrCUB3F0.png", alt: "Wheat trade", w: 380, h: 320, rotate: -2 },
+  { src: "/work-clone/framer/images/Wiw196PFt5v5LcQxgcrCUB3F0.png", alt: "Wheat trade", w: 380, h: 320, rotate: -2 },
   {
-    src: "https://framerusercontent.com/images/Isusj1Nh2i04aFkiuiBVhYCfec.png",
+    src: "/work-clone/framer/images/Isusj1Nh2i04aFkiuiBVhYCfec.png",
     alt: "The First 2048",
     href: "https://tf2048.io/",
     w: 369, h: 272, rotate: 2,
   },
-  { src: "https://framerusercontent.com/images/5YyYUryAtcl0ESyOgNb4S9dajw.png", alt: "Mountain bike", w: 289, h: 310, rotate: -3 },
+  { src: "/work-clone/framer/images/5YyYUryAtcl0ESyOgNb4S9dajw.png", alt: "Mountain bike", w: 289, h: 310, rotate: -3 },
 ];
 
 const RULER_NUMBERS = Array.from({ length: 18 }, (_, i) => i + 1);
@@ -150,7 +150,7 @@ export default function AboutSection() {
               className="absolute inset-0 pointer-events-none"
               style={{
                 backgroundImage:
-                  "url('https://framerusercontent.com/images/9G25ruOgt322clA0e0vFrw4RNEs.png')",
+                  "url('/work-clone/framer/images/9G25ruOgt322clA0e0vFrw4RNEs.png')",
                 backgroundRepeat: "repeat",
                 backgroundSize: "183px",
                 border: "3px solid #f5e1cd",

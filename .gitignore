@@ -40,3 +40,7 @@ clone-full/
 *.njsproj
 *.sln
 *.sw?
+
+# Local DB backups
+backups/
+.env.prod

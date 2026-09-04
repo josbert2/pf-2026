@@ -2,11 +2,11 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
 const IMG_1 =
-  "https://framerusercontent.com/images/rhT0iPheLHJdGQAZ04lGqNb0I.png?scale-down-to=512";
+  "/work-clone/framer/images/rhT0iPheLHJdGQAZ04lGqNb0I.png";
 const IMG_2 =
-  "https://framerusercontent.com/images/m0nSd9OmKrRp1nvRHVH89tLs0mg.png?scale-down-to=512";
+  "/work-clone/framer/images/m0nSd9OmKrRp1nvRHVH89tLs0mg.png";
 const IMG_3 =
-  "https://framerusercontent.com/images/0aKOwaR29QHg04I7MHlsi9j1g4.png?scale-down-to=1024";
+  "/work-clone/framer/images/0aKOwaR29QHg04I7MHlsi9j1g4.png";
 
 export default function ValuesWidget() {
   const containerRef = useRef(null);

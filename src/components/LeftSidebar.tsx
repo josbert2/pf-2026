@@ -1,14 +1,14 @@
 import { motion } from "motion/react";
 
 const STAMPS = [
-  { src: "https://framerusercontent.com/images/JnX4DQ93dVEHzTFGkUsZLNV4.png", alt: "Zhang" },
-  { src: "https://framerusercontent.com/images/RYvnMMGEz4Ds3BGL5W1lRp9GOCU.png", alt: "Grew up in a resturant" },
-  { src: "https://framerusercontent.com/images/zs8DG1Zf6J6s1d5yc00xHp98b60.png", alt: "Digital world" },
-  { src: "https://framerusercontent.com/images/X8TlTAmfaqh8FaOYxjSjYMniaE.png", alt: "Fynbos" },
-  { src: "https://framerusercontent.com/images/J4bjhr8zDlxffN0kZnWBShva0GY.png", alt: "Night owl" },
-  { src: "https://framerusercontent.com/images/2LGPmWLUdShRmg0q79YvdcxivM.png", alt: "More fynbos" },
-  { src: "https://framerusercontent.com/images/jvHISkS7qP9hkgBbgfRCAiPpjjI.png", alt: "Even more fynbos" },
-  { src: "https://framerusercontent.com/images/z0ha6Cap1xjkHBWyu1iV9tnWBNQ.png", alt: "The Black Axe!" },
+  { src: "/work-clone/framer/images/JnX4DQ93dVEHzTFGkUsZLNV4.png", alt: "Zhang" },
+  { src: "/work-clone/framer/images/RYvnMMGEz4Ds3BGL5W1lRp9GOCU.png", alt: "Grew up in a resturant" },
+  { src: "/work-clone/framer/images/zs8DG1Zf6J6s1d5yc00xHp98b60.png", alt: "Digital world" },
+  { src: "/work-clone/framer/images/X8TlTAmfaqh8FaOYxjSjYMniaE.png", alt: "Fynbos" },
+  { src: "/work-clone/framer/images/J4bjhr8zDlxffN0kZnWBShva0GY.png", alt: "Night owl" },
+  { src: "/work-clone/framer/images/2LGPmWLUdShRmg0q79YvdcxivM.png", alt: "More fynbos" },
+  { src: "/work-clone/framer/images/jvHISkS7qP9hkgBbgfRCAiPpjjI.png", alt: "Even more fynbos" },
+  { src: "/work-clone/framer/images/z0ha6Cap1xjkHBWyu1iV9tnWBNQ.png", alt: "The Black Axe!" },
 ];
 
 export default function LeftSidebar() {

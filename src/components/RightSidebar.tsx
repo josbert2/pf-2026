@@ -1,14 +1,14 @@
 import { motion } from "motion/react";
 
 const STAMPS = [
-  { src: "https://framerusercontent.com/images/JnX4DQ93dVEHzTFGkUsZLNV4.png?width=157&height=157", alt: "Zhang" },
-  { src: "https://framerusercontent.com/images/RYvnMMGEz4Ds3BGL5W1lRp9GOCU.png?width=157&height=157", alt: "Restaurant kid" },
-  { src: "https://framerusercontent.com/images/zs8DG1Zf6J6s1d5yc00xHp98b60.png?width=157&height=157", alt: "Digital world" },
-  { src: "https://framerusercontent.com/images/X8TlTAmfaqh8FaOYxjSjYMniaE.png?width=157&height=159", alt: "Fynbos" },
-  { src: "https://framerusercontent.com/images/J4bjhr8zDlxffN0kZnWBShva0GY.png?width=157&height=157", alt: "Night owl" },
-  { src: "https://framerusercontent.com/images/2LGPmWLUdShRmg0q79YvdcxivM.png?width=157&height=157", alt: "More fynbos" },
-  { src: "https://framerusercontent.com/images/jvHISkS7qP9hkgBbgfRCAiPpjjI.png?width=157&height=163", alt: "Even more fynbos" },
-  { src: "https://framerusercontent.com/images/z0ha6Cap1xjkHBWyu1iV9tnWBNQ.png?width=157&height=157", alt: "The Black Axe!" },
+  { src: "/work-clone/framer/images/JnX4DQ93dVEHzTFGkUsZLNV4.png", alt: "Zhang" },
+  { src: "/work-clone/framer/images/RYvnMMGEz4Ds3BGL5W1lRp9GOCU.png", alt: "Restaurant kid" },
+  { src: "/work-clone/framer/images/zs8DG1Zf6J6s1d5yc00xHp98b60.png", alt: "Digital world" },
+  { src: "/work-clone/framer/images/X8TlTAmfaqh8FaOYxjSjYMniaE.png", alt: "Fynbos" },
+  { src: "/work-clone/framer/images/J4bjhr8zDlxffN0kZnWBShva0GY.png", alt: "Night owl" },
+  { src: "/work-clone/framer/images/2LGPmWLUdShRmg0q79YvdcxivM.png", alt: "More fynbos" },
+  { src: "/work-clone/framer/images/jvHISkS7qP9hkgBbgfRCAiPpjjI.png", alt: "Even more fynbos" },
+  { src: "/work-clone/framer/images/z0ha6Cap1xjkHBWyu1iV9tnWBNQ.png", alt: "The Black Axe!" },
 ];
 
 function StampImage({ src, alt }: { src: string, alt: string }) {

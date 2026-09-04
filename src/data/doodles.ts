@@ -13,7 +13,7 @@ export const doodles: DoodleData[] = [
   {
     id: "doodle-cat",
     name: "Cat",
-    url: "https://framerusercontent.com/images/0aKOwaR29QHg04I7MHlsi9j1g4.png", // Example URL from extract
+    url: "/work-clone/framer/images/0aKOwaR29QHg04I7MHlsi9j1g4.png", // Example URL from extract
     position: { top: "15%", left: "10%" },
     rotation: "-10deg",
     width: 80,
@@ -21,7 +21,7 @@ export const doodles: DoodleData[] = [
   {
     id: "doodle-fish",
     name: "Fish",
-    url: "https://framerusercontent.com/images/0Kj6KlVZPILk9uoSPK7tmq8hGJU.png",
+    url: "/work-clone/framer/images/0Kj6KlVZPILk9uoSPK7tmq8hGJU.png",
     position: { top: "35%", right: "12%" },
     rotation: "15deg",
     width: 70,
@@ -29,7 +29,7 @@ export const doodles: DoodleData[] = [
   {
     id: "doodle-flowers",
     name: "Flowers",
-    url: "https://framerusercontent.com/images/0pNvbqriNrL1D2jxTeMwqGMPVo.png",
+    url: "/work-clone/framer/images/0pNvbqriNrL1D2jxTeMwqGMPVo.png",
     position: { bottom: "25%", left: "8%" },
     rotation: "-5deg",
     width: 100,
@@ -37,7 +37,7 @@ export const doodles: DoodleData[] = [
   {
     id: "doodle-bird",
     name: "Bird",
-    url: "https://framerusercontent.com/images/2LGPmWLUdShRmg0q79YvdcxivM.png",
+    url: "/work-clone/framer/images/2LGPmWLUdShRmg0q79YvdcxivM.png",
     position: { bottom: "45%", right: "15%" },
     rotation: "25deg",
     width: 65,
@@ -45,7 +45,7 @@ export const doodles: DoodleData[] = [
   {
     id: "doodle-mushroom",
     name: "Mushrooms",
-    url: "https://framerusercontent.com/images/5kwx3ViaHeW5I6KliMS9bsYa0U.png",
+    url: "/work-clone/framer/images/5kwx3ViaHeW5I6KliMS9bsYa0U.png",
     position: { top: "50%", left: "5%" },
     rotation: "5deg",
     width: 80,
@@ -53,7 +53,7 @@ export const doodles: DoodleData[] = [
   {
     id: "doodle-dice",
     name: "Dice",
-    url: "https://framerusercontent.com/images/5YyYUryAtcl0ESyOgNb4S9dajw.png",
+    url: "/work-clone/framer/images/5YyYUryAtcl0ESyOgNb4S9dajw.png",
     position: { bottom: "10%", right: "5%" },
     rotation: "-15deg",
     width: 75,

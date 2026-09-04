@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     id: "proj-1",
     title: "Project 1",
-    url: "https://framerusercontent.com/images/Wiw196PFt5v5LcQxgcrCUB3F0.png",
+    url: "/work-clone/framer/images/Wiw196PFt5v5LcQxgcrCUB3F0.png",
     rotation: "-4deg",
     width: 600,
     position: { top: "5%", left: "10%" },
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: "proj-2",
     title: "Project 2",
-    url: "https://framerusercontent.com/images/qPdyyjiGVcYhSJZ659iudjEFmbw.png",
+    url: "/work-clone/framer/images/qPdyyjiGVcYhSJZ659iudjEFmbw.png",
     rotation: "-2deg",
     width: 500,
     position: { top: "12%", left: "55%" },
@@ -31,7 +31,7 @@ export const projects: Project[] = [
   {
     id: "proj-3",
     title: "Emoji Grid",
-    url: "https://framerusercontent.com/images/JiCsfFAbrVrZSX3x7Y9dkgzckI.png",
+    url: "/work-clone/framer/images/JiCsfFAbrVrZSX3x7Y9dkgzckI.png",
     rotation: "2deg",
     width: 300,
     position: { top: "25%", left: "5%" },
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     id: "proj-4",
     title: "Project 4",
-    url: "https://framerusercontent.com/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png",
+    url: "/work-clone/framer/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png",
     rotation: "-6deg",
     width: 700,
     position: { top: "30%", left: "30%" },
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     id: "proj-5",
     title: "Project 5",
-    url: "https://framerusercontent.com/images/5YyYUryAtcl0ESyOgNb4S9dajw.png",
+    url: "/work-clone/framer/images/5YyYUryAtcl0ESyOgNb4S9dajw.png",
     rotation: "-2deg",
     width: 550,
     position: { top: "18%", left: "20%" },
@@ -58,7 +58,7 @@ export const projects: Project[] = [
   {
     id: "proj-6",
     title: "Project 6",
-    url: "https://framerusercontent.com/images/aybhK1OWWsMUjIyA7Kj5iET0zE.png",
+    url: "/work-clone/framer/images/aybhK1OWWsMUjIyA7Kj5iET0zE.png",
     rotation: "6deg",
     width: 400,
     position: { top: "45%", left: "60%" },
@@ -67,7 +67,7 @@ export const projects: Project[] = [
   {
     id: "proj-7",
     title: "Project 7",
-    url: "https://framerusercontent.com/images/afys4KtZC007XBhmTWURY9KL4.png",
+    url: "/work-clone/framer/images/afys4KtZC007XBhmTWURY9KL4.png",
     rotation: "-2deg",
     width: 650,
     position: { top: "40%", left: "8%" },
@@ -76,7 +76,7 @@ export const projects: Project[] = [
   {
     id: "proj-8",
     title: "Project 8",
-    url: "https://framerusercontent.com/images/UeG3qBVgjLwvwcGSGQLZM9AI.png",
+    url: "/work-clone/framer/images/UeG3qBVgjLwvwcGSGQLZM9AI.png",
     rotation: "-3deg",
     width: 600,
     position: { top: "55%", left: "45%" },
@@ -85,7 +85,7 @@ export const projects: Project[] = [
   {
     id: "proj-9",
     title: "Project 9",
-    url: "https://framerusercontent.com/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png",
+    url: "/work-clone/framer/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png",
     rotation: "4deg",
     width: 700,
     position: { top: "65%", left: "10%" },
@@ -94,7 +94,7 @@ export const projects: Project[] = [
   {
     id: "proj-10",
     title: "Project 10",
-    url: "https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png",
+    url: "/work-clone/framer/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png",
     rotation: "-3deg",
     width: 800,
     position: { top: "72%", left: "35%" },
@@ -103,7 +103,7 @@ export const projects: Project[] = [
   {
     id: "proj-11",
     title: "Project 11",
-    url: "https://framerusercontent.com/images/cmpsfHDSBvMIVkOtMJffhTk8HA.png",
+    url: "/work-clone/framer/images/cmpsfHDSBvMIVkOtMJffhTk8HA.png",
     rotation: "7deg",
     width: 500,
     position: { top: "82%", left: "65%" },
@@ -112,7 +112,7 @@ export const projects: Project[] = [
   {
     id: "proj-12",
     title: "Who's Speaking",
-    url: "https://framerusercontent.com/images/OqvkDghj18vNLRheWfCb9I9ZC5M.png",
+    url: "/work-clone/framer/images/OqvkDghj18vNLRheWfCb9I9ZC5M.png",
     rotation: "-4deg",
     width: 900,
     link: "https://whosspeaking.framer.website/",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
   {
     id: "proj-13",
     title: "Project 13",
-    url: "https://framerusercontent.com/images/SMhadH5n5CuLH7ZXJnFHzzfUI7k.png",
+    url: "/work-clone/framer/images/SMhadH5n5CuLH7ZXJnFHzzfUI7k.png",
     rotation: "-6deg",
     width: 450,
     position: { top: "78%", left: "20%" },
@@ -131,7 +131,7 @@ export const projects: Project[] = [
   {
     id: "proj-14",
     title: "Project 14",
-    url: "https://framerusercontent.com/images/HUqtxwLIEIp2z66d1Rbksv2PbbY.png",
+    url: "/work-clone/framer/images/HUqtxwLIEIp2z66d1Rbksv2PbbY.png",
     rotation: "-6deg",
     width: 550,
     position: { top: "92%", left: "50%" },
@@ -140,7 +140,7 @@ export const projects: Project[] = [
   {
     id: "proj-15",
     title: "The First 2048",
-    url: "https://framerusercontent.com/images/Isusj1Nh2i04aFkiuiBVhYCfec.png",
+    url: "/work-clone/framer/images/Isusj1Nh2i04aFkiuiBVhYCfec.png",
     rotation: "3deg",
     width: 650,
     link: "https://tf2048.io/",

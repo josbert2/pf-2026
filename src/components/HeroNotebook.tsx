@@ -17,7 +17,7 @@ export default function HeroNotebook() {
             <div 
                className="absolute inset-0 opacity-[0.54] mix-blend-multiply" 
                style={{ 
-                 backgroundImage: "url('https://framerusercontent.com/images/FqqwJe3cXajmh3c17ziisS6QOJU.jpg')", 
+                 backgroundImage: "url('/work-clone/framer/images/FqqwJe3cXajmh3c17ziisS6QOJU.jpg')", 
                  backgroundSize: "1448px auto",
                  backgroundRepeat: "repeat",
                  backgroundPosition: "left top"
@@ -45,7 +45,7 @@ export default function HeroNotebook() {
             <div 
                className="absolute inset-x-0 top-0 bottom-0 opacity-[0.29] pointer-events-none z-0"
                style={{ 
-                 backgroundImage: "url('https://framerusercontent.com/images/fiStjr6PCyart5FAr44gZdenfA.png')", 
+                 backgroundImage: "url('/work-clone/framer/images/fiStjr6PCyart5FAr44gZdenfA.png')", 
                  backgroundSize: "41.5px auto",
                  backgroundRepeat: "repeat",
                  backgroundPosition: "center top",
@@ -95,8 +95,8 @@ export default function HeroNotebook() {
                         <path d="M157.988 18.4402C157.988 16.4402 159.988 15.4402 159.988 17.4402" stroke="#E35341" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round"/>
                         <path d="M148.988 25.4402C150.988 30.4402 156.988 32.4402 161.988 29.4402" stroke="#E35341" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round"/>
                      </svg>
-                     <div aria-label="Product Designer" className="flex items-center font-averia text-accent-red text-[26px] tracking-wide font-normal h-10 select-none">
-                        {["P", "r", "o", "d", "u", "c", "t", " ", "D", "e", "s", "i", "g", "n", "e", "r"].map((char, i) => (
+                     <div aria-label="Frontend Engineer" className="flex items-center font-averia text-accent-red text-[26px] tracking-wide font-normal h-10 select-none">
+                        {[..."Frontend Engineer"].map((char, i) => (
                            <div key={i} className="relative group inline-block pointer-events-auto cursor-default">
                               {/* Layout Stabilizer Letter (Averia) */}
                               <motion.span
@@ -118,6 +118,15 @@ export default function HeroNotebook() {
                            </div>
                         ))}
                      </div>
+                     <motion.div
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: 1.3 }}
+                        className="text-accent-red/90 text-[21px] rotate-[-2deg] -mt-1 select-none"
+                        style={{ fontFamily: '"Gochi Hand", cursive' }}
+                     >
+                        &amp; creative developer
+                     </motion.div>
                   </motion.div>
                   
                   <motion.h1 
@@ -150,7 +159,7 @@ export default function HeroNotebook() {
                  className="absolute bottom-[-81px] right-0 let-auto width-full h-full flex justify-end pt-[50px] pl-[50px]"
                >
                   <img 
-                     src="https://framerusercontent.com/images/zreYWHKtYVvdYwuZm8gBYAa3IiA.png" 
+                     src="/work-clone/framer/images/zreYWHKtYVvdYwuZm8gBYAa3IiA.png" 
                      alt="Hero Illustration"
                      className="w-full h-full object-contain"
                   />
@@ -162,7 +171,7 @@ export default function HeroNotebook() {
       {/* 2. BOOK BINDING CREASE (the fold) */}
       <div className="h-16 w-full flex relative z-30 px-3 md:px-6 -my-8 items-center justify-center">
          <div className="absolute left-[-20px] z-50">
-            <img src="https://framerusercontent.com/images/a5uPbmT6PvUwjD3MFRKJ8andRk.png?width=444&height=437" alt="Book Crease" className="w-auto h-[200px] object-contain" />
+            <img src="/work-clone/framer/images/a5uPbmT6PvUwjD3MFRKJ8andRk.png" alt="Book Crease" className="w-auto h-[200px] object-contain" />
          </div>
           <div className="w-full h-[7px] bg-[#c24234] rounded-[3px] shadow-[inset_0px_2px_4px_rgba(0,0,0,0.3)] border-b border-black/20" />
       </div>
@@ -192,8 +201,8 @@ export default function HeroNotebook() {
                         width={552}
                         height={242}
                         sizes="186px"
-                        srcSet="https://framerusercontent.com/images/BUQeUkXwalGo0ETntC1tuR9TM.png?scale-down-to=512&width=552&height=242 512w,https://framerusercontent.com/images/BUQeUkXwalGo0ETntC1tuR9TM.png?width=552&height=242 552w"
-                        src="https://framerusercontent.com/images/BUQeUkXwalGo0ETntC1tuR9TM.png?width=552&height=242"
+                        srcSet="/work-clone/framer/images/BUQeUkXwalGo0ETntC1tuR9TM.png 512w,/work-clone/framer/images/BUQeUkXwalGo0ETntC1tuR9TM.png 552w"
+                        src="/work-clone/framer/images/BUQeUkXwalGo0ETntC1tuR9TM.png"
                         alt=""
                         style={{
                         display: "block",
@@ -227,7 +236,7 @@ export default function HeroNotebook() {
                      loading="lazy"
                      width={430}
                      height={462}
-                     src="https://framerusercontent.com/images/rRKteDbgGPSRnYv0ydZFYq7DfI.png?width=430&height=462"
+                     src="/work-clone/framer/images/rRKteDbgGPSRnYv0ydZFYq7DfI.png"
                      alt=""
                      style={{
                         display: "block",
@@ -249,7 +258,7 @@ export default function HeroNotebook() {
             <div 
                className="absolute inset-0 opacity-[0.54] mix-blend-multiply" 
                style={{ 
-                 backgroundImage: "url('https://framerusercontent.com/images/FqqwJe3cXajmh3c17ziisS6QOJU.jpg')", 
+                 backgroundImage: "url('/work-clone/framer/images/FqqwJe3cXajmh3c17ziisS6QOJU.jpg')", 
                  backgroundSize: "1448px auto",
                  backgroundRepeat: "repeat"
                }}

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import FramerHeader from "./FramerHeader";
 
 // ── Image constants ────────────────────────────────────────────────────────────
-const BASE = "https://framerusercontent.com/images/";
+const BASE = "/work-clone/framer/images/";
 
 // Clothing-tag logos (199×199)
 const LOGO_BASH    = BASE + "RyeLyODnC04hmZGWqOu2c4Kf1M.png";
@@ -225,8 +225,6 @@ function ClothingTag({ project }: { project: Project }) {
 
 // ── ProjectCard ───────────────────────────────────────────────────────────────
 function ProjectCard({ project, index }: { project: Project; index: number }) {
-  const isDark = project.cardBg === "#292929";
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}

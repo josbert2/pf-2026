@@ -1,3 +1,4 @@
+// @ts-nocheck -- generated Framer export; not hand-typechecked (Vite/esbuild still builds it)
 import React from "react";
 
 /**
@@ -83,8 +84,8 @@ export default function ValuesSection() {
                     width="1246"
                     height="1378"
                     sizes="max(268.4314px - 20px, 1px)"
-                    srcSet="https://framerusercontent.com/images/6rBYKVmILDjUMitcTXjMZ0SPM.png?scale-down-to=1024&width=1246&height=1378 925w,https://framerusercontent.com/images/6rBYKVmILDjUMitcTXjMZ0SPM.png?width=1246&height=1378 1246w"
-                    src="https://framerusercontent.com/images/6rBYKVmILDjUMitcTXjMZ0SPM.png?width=1246&height=1378"
+                    srcSet="/work-clone/framer/images/6rBYKVmILDjUMitcTXjMZ0SPM.png 925w,/work-clone/framer/images/6rBYKVmILDjUMitcTXjMZ0SPM.png 1246w"
+                    src="/work-clone/framer/images/6rBYKVmILDjUMitcTXjMZ0SPM.png"
                     alt=""
                     style={{
                       aspectRatio: "auto 1246 / 1378",
@@ -153,8 +154,8 @@ export default function ValuesSection() {
                     width="2228"
                     height="1894"
                     sizes="max(320.3601px - 20px, 1px)"
-                    srcSet="https://framerusercontent.com/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png?scale-down-to=512&width=2228&height=1894 512w,https://framerusercontent.com/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png?scale-down-to=1024&width=2228&height=1894 1024w,https://framerusercontent.com/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png?scale-down-to=2048&width=2228&height=1894 2048w,https://framerusercontent.com/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png?width=2228&height=1894 2228w"
-                    src="https://framerusercontent.com/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png?width=2228&height=1894"
+                    srcSet="/work-clone/framer/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png 512w,/work-clone/framer/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png 1024w,/work-clone/framer/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png 2048w,/work-clone/framer/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png 2228w"
+                    src="/work-clone/framer/images/QvIk4OtR2xbSpy213Cwtbyw6Q.png"
                     alt=""
                     style={{
                       aspectRatio: "auto 2228 / 1894",
@@ -195,7 +196,7 @@ export default function ValuesSection() {
                 loading="lazy"
                 width="164"
                 height="151"
-                src="https://framerusercontent.com/images/LKbBfnsJYBIcTHb37SByXysxfM.png?width=164&height=151"
+                src="/work-clone/framer/images/LKbBfnsJYBIcTHb37SByXysxfM.png"
                 alt=""
                 style={{
                   aspectRatio: "auto 164 / 151",
@@ -232,7 +233,7 @@ export default function ValuesSection() {
               loading="lazy"
               width="302"
               height="300"
-              src="https://framerusercontent.com/images/PyLCiCXcTclOUzVEMcAaMR8w.png?width=302&height=300"
+              src="/work-clone/framer/images/PyLCiCXcTclOUzVEMcAaMR8w.png"
               alt=""
               style={{
                 aspectRatio: "auto 302 / 300",
@@ -324,8 +325,8 @@ export default function ValuesSection() {
                     width="1546"
                     height="1894"
                     sizes="max(239.2937px - 20px, 1px)"
-                    srcSet="https://framerusercontent.com/images/5YyYUryAtcl0ESyOgNb4S9dajw.png?scale-down-to=1024&width=1546&height=1894 835w,https://framerusercontent.com/images/5YyYUryAtcl0ESyOgNb4S9dajw.png?width=1546&height=1894 1546w"
-                    src="https://framerusercontent.com/images/5YyYUryAtcl0ESyOgNb4S9dajw.png?width=1546&height=1894"
+                    srcSet="/work-clone/framer/images/5YyYUryAtcl0ESyOgNb4S9dajw.png 835w,/work-clone/framer/images/5YyYUryAtcl0ESyOgNb4S9dajw.png 1546w"
+                    src="/work-clone/framer/images/5YyYUryAtcl0ESyOgNb4S9dajw.png"
                     alt=""
                     style={{
                       aspectRatio: "auto 1546 / 1894",
@@ -393,7 +394,7 @@ export default function ValuesSection() {
                     loading="lazy"
                     width="500"
                     height="489"
-                    src="https://framerusercontent.com/images/aybhK1OWWsMUjIyA7Kj5iET0zE.png?width=500&height=489"
+                    src="/work-clone/framer/images/aybhK1OWWsMUjIyA7Kj5iET0zE.png"
                     alt=""
                     style={{
                       aspectRatio: "auto 500 / 489",
@@ -429,8 +430,8 @@ export default function ValuesSection() {
               width="322"
               height="682"
               sizes="137px"
-              srcSet="https://framerusercontent.com/images/a4cvua7pf3dgY3RkFzwNmyByP1Y.png?width=322&height=682 322w"
-              src="https://framerusercontent.com/images/a4cvua7pf3dgY3RkFzwNmyByP1Y.png?width=322&height=682"
+              srcSet="/work-clone/framer/images/a4cvua7pf3dgY3RkFzwNmyByP1Y.png 322w"
+              src="/work-clone/framer/images/a4cvua7pf3dgY3RkFzwNmyByP1Y.png"
               alt=""
               style={{
                 aspectRatio: "auto 322 / 682",

@@ -1,3 +1,4 @@
+// @ts-nocheck -- generated Framer export; not hand-typechecked (Vite/esbuild still builds it)
 import React from "react";
 
 /**
@@ -88,8 +89,8 @@ export default function EmpowerSection() {
                     width="1754"
                     height="1394"
                     sizes="max(217.3015px - 20px, 1px)"
-                    srcSet="https://framerusercontent.com/images/afys4KtZC007XBhmTWURY9KL4.png?scale-down-to=512&width=1754&height=1394 512w,https://framerusercontent.com/images/afys4KtZC007XBhmTWURY9KL4.png?scale-down-to=1024&width=1754&height=1394 1024w,https://framerusercontent.com/images/afys4KtZC007XBhmTWURY9KL4.png?width=1754&height=1394 1754w"
-                    src="https://framerusercontent.com/images/afys4KtZC007XBhmTWURY9KL4.png?width=1754&height=1394"
+                    srcSet="/work-clone/framer/images/afys4KtZC007XBhmTWURY9KL4.png 512w,/work-clone/framer/images/afys4KtZC007XBhmTWURY9KL4.png 1024w,/work-clone/framer/images/afys4KtZC007XBhmTWURY9KL4.png 1754w"
+                    src="/work-clone/framer/images/afys4KtZC007XBhmTWURY9KL4.png"
                     alt=""
                     style={{
                       aspectRatio: "auto 1754 / 1394",
@@ -157,8 +158,8 @@ export default function EmpowerSection() {
                     width="1728"
                     height="1117"
                     sizes="max(278.9579px - 20px, 1px)"
-                    srcSet="https://framerusercontent.com/images/UeG3qBVgjLwvwcGSGQLZM9AI.png?scale-down-to=512&width=1728&height=1117 512w,https://framerusercontent.com/images/UeG3qBVgjLwvwcGSGQLZM9AI.png?scale-down-to=1024&width=1728&height=1117 1024w,https://framerusercontent.com/images/UeG3qBVgjLwvwcGSGQLZM9AI.png?width=1728&height=1117 1728w"
-                    src="https://framerusercontent.com/images/UeG3qBVgjLwvwcGSGQLZM9AI.png?width=1728&height=1117"
+                    srcSet="/work-clone/framer/images/UeG3qBVgjLwvwcGSGQLZM9AI.png 512w,/work-clone/framer/images/UeG3qBVgjLwvwcGSGQLZM9AI.png 1024w,/work-clone/framer/images/UeG3qBVgjLwvwcGSGQLZM9AI.png 1728w"
+                    src="/work-clone/framer/images/UeG3qBVgjLwvwcGSGQLZM9AI.png"
                     alt=""
                     style={{
                       aspectRatio: "auto 1728 / 1117",
@@ -227,8 +228,8 @@ export default function EmpowerSection() {
                     width="2066"
                     height="1202"
                     sizes="max(352.6449px - 20px, 1px)"
-                    srcSet="https://framerusercontent.com/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png?scale-down-to=512&width=2066&height=1202 512w,https://framerusercontent.com/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png?scale-down-to=1024&width=2066&height=1202 1024w,https://framerusercontent.com/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png?scale-down-to=2048&width=2066&height=1202 2048w,https://framerusercontent.com/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png?width=2066&height=1202 2066w"
-                    src="https://framerusercontent.com/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png?width=2066&height=1202"
+                    srcSet="/work-clone/framer/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png 512w,/work-clone/framer/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png 1024w,/work-clone/framer/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png 2048w,/work-clone/framer/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png 2066w"
+                    src="/work-clone/framer/images/CjJRxESsZDM96KjX4zi3ntiSl7c.png"
                     alt=""
                     style={{
                       aspectRatio: "auto 2066 / 1202",
@@ -262,7 +263,7 @@ export default function EmpowerSection() {
               loading="lazy"
               width="130"
               height="240"
-              src="https://framerusercontent.com/images/bvaE5Tit9l38Dd7DsufX28pGs.png?width=130&height=240"
+              src="/work-clone/framer/images/bvaE5Tit9l38Dd7DsufX28pGs.png"
               alt=""
               style={{
                 aspectRatio: "auto 130 / 240",
@@ -349,8 +350,8 @@ export default function EmpowerSection() {
                     width="1754"
                     height="1394"
                     sizes="max(332.8496px - 20px, 1px)"
-                    srcSet="https://framerusercontent.com/images/jkezJCVWvw8W2KInfhlRWQOlS4.png?scale-down-to=512&width=1754&height=1394 512w,https://framerusercontent.com/images/jkezJCVWvw8W2KInfhlRWQOlS4.png?scale-down-to=1024&width=1754&height=1394 1024w,https://framerusercontent.com/images/jkezJCVWvw8W2KInfhlRWQOlS4.png?width=1754&height=1394 1754w"
-                    src="https://framerusercontent.com/images/jkezJCVWvw8W2KInfhlRWQOlS4.png?width=1754&height=1394"
+                    srcSet="/work-clone/framer/images/jkezJCVWvw8W2KInfhlRWQOlS4.png 512w,/work-clone/framer/images/jkezJCVWvw8W2KInfhlRWQOlS4.png 1024w,/work-clone/framer/images/jkezJCVWvw8W2KInfhlRWQOlS4.png 1754w"
+                    src="/work-clone/framer/images/jkezJCVWvw8W2KInfhlRWQOlS4.png"
                     alt=""
                     style={{
                       aspectRatio: "auto 1754 / 1394",
@@ -418,8 +419,8 @@ export default function EmpowerSection() {
                     width="2876"
                     height="2870"
                     sizes="max(229.8414px - 20px, 1px)"
-                    srcSet="https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?scale-down-to=512&width=2876&height=2870 512w,https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?scale-down-to=1024&width=2876&height=2870 1024w,https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?scale-down-to=2048&width=2876&height=2870 2048w,https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?width=2876&height=2870 2876w"
-                    src="https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?width=2876&height=2870"
+                    srcSet="/work-clone/framer/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png 512w,/work-clone/framer/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png 1024w,/work-clone/framer/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png 2048w,/work-clone/framer/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png 2876w"
+                    src="/work-clone/framer/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png"
                     alt=""
                     style={{
                       aspectRatio: "auto 2876 / 2870",
@@ -455,7 +456,7 @@ export default function EmpowerSection() {
               loading="lazy"
               width="408"
               height="326"
-              src="https://framerusercontent.com/images/Y6jrcs7yZkqh9sRA4eMYaPQ96pk.png?width=408&height=326"
+              src="/work-clone/framer/images/Y6jrcs7yZkqh9sRA4eMYaPQ96pk.png"
               alt=""
               style={{
                 aspectRatio: "auto 408 / 326",

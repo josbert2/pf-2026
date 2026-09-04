@@ -1,3 +1,4 @@
+// @ts-nocheck -- generated Framer export; not hand-typechecked (Vite/esbuild still builds it)
 import React from "react";
 import BashTag from "./work/BashTag";
 
@@ -1519,8 +1520,8 @@ export default function FramerHeader() {
             width="308"
             height="573"
             sizes="85px"
-            srcset="https://framerusercontent.com/images/csmYzdIDt1WdC22VsyzJx1QA.png?width=308&amp;height=573 308w"
-            src="https://framerusercontent.com/images/csmYzdIDt1WdC22VsyzJx1QA.png?width=308&amp;height=573"
+            srcset="/work-clone/framer/images/csmYzdIDt1WdC22VsyzJx1QA.png 308w"
+            src="/work-clone/framer/images/csmYzdIDt1WdC22VsyzJx1QA.png"
             alt=""
             style={{
               accentColor: "auto",

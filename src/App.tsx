@@ -1,34 +1,42 @@
-import { motion } from "motion/react";
+import { Head } from "vite-react-ssg";
+import { SITE_URL } from "./lib/site";
 
 import HeroNotebook from "./components/HeroNotebook";
-import ScatteredGallery from "./components/ScatteredGallery";
-import FooterMarquee from "./components/FooterMarquee";
 import FooterSection from "./components/FooterSection";
 import ClickBurst from "./components/ClickBurst";
 import LeftSidebar from "./components/LeftSidebar";
 import RightSidebar from "./components/RightSidebar";
 import TopNav from "./components/TopNav";
-import Doodle from "./components/Doodle";
-import ProfilePolaroid from "./components/ProfilePolaroid";
-import FooterCTA from "./components/FooterCTA";
 import DecoSticker from "./components/DecoSticker";
-import ValuesWidget from "./components/ValuesWidget";
 import TirelesslyPursueClarity from "./components/TirelesslyPursueClarity";
-import AboutSection from "./components/AboutSection";
 import AboutSectionFramer from "./components/AboutSectionFramer";
 import ValuesSection from "./components/ValuesSection";
 import EmpowerSection from "./components/EmpowerSection";
 
-import { doodles } from "./data/doodles";
-
 export default function App() {
   return (
     <div className="min-h-screen relative font-mono text-light overflow-hidden flex flex-col">
+      <Head>
+        <title>josbert — frontend engineer &amp; creative developer</title>
+        <meta
+          name="description"
+          content="Portfolio of josbert — frontend engineer and creative developer. Software should empower; design for the moments that matter."
+        />
+        <link rel="canonical" href={SITE_URL} />
+        <meta property="og:title" content="josbert — frontend engineer & creative developer" />
+        <meta
+          property="og:description"
+          content="Software should empower; design for the moments that matter."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={SITE_URL} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <ClickBurst />
       
       {/* Decorative Scattered Stickers */}
       <DecoSticker
-         src="https://framerusercontent.com/images/cqrOEukUtJ5q6innagqIo1y7ig.png"
+         src="/work-clone/framer/images/cqrOEukUtJ5q6innagqIo1y7ig.png"
          alt="Deco - flower 01"
          className="hidden lg:block"
          style={{
@@ -40,7 +48,7 @@ export default function App() {
          }}
       />
       <DecoSticker
-         src="https://framerusercontent.com/images/0pNvbqriNrL1D2jxTeMwqGMPVo.png"
+         src="/work-clone/framer/images/0pNvbqriNrL1D2jxTeMwqGMPVo.png"
          alt="Decor - flower 02"
          className="hidden lg:block"
          style={{
@@ -52,7 +60,7 @@ export default function App() {
          }}
       />
       <DecoSticker
-         src="https://framerusercontent.com/images/CMfmtNsS4WRTLeJcQt1lujXYM.png"
+         src="/work-clone/framer/images/CMfmtNsS4WRTLeJcQt1lujXYM.png"
          alt="Deco - fish"
          className="hidden lg:block"
          style={{
@@ -64,7 +72,7 @@ export default function App() {
          }}
       />
       <DecoSticker
-         src="https://framerusercontent.com/images/DUDVhZzaglA4vXZTKvTA6gePrU.png"
+         src="/work-clone/framer/images/DUDVhZzaglA4vXZTKvTA6gePrU.png"
          alt="Deco godzilla"
          className="hidden lg:block"
          style={{
@@ -76,7 +84,7 @@ export default function App() {
          }}
       />
       <DecoSticker
-         src="https://framerusercontent.com/images/qe4YBLLmBViMAbL2fiphUNfdxA.png"
+         src="/work-clone/framer/images/qe4YBLLmBViMAbL2fiphUNfdxA.png"
          alt="Deco noodle"
          className="hidden lg:block"
          style={{
@@ -89,7 +97,7 @@ export default function App() {
          }}
       />
       <DecoSticker 
-         src="https://framerusercontent.com/images/uNzaxXZLk1aHsF3AXi7f4aGR0g.png" 
+         src="/work-clone/framer/images/uNzaxXZLk1aHsF3AXi7f4aGR0g.png" 
          alt="Deco juicebox" 
          className="top-32 left-32 w-[104px] hidden lg:block"
          style={{ aspectRatio: "0.677536", height: "153px" }}
@@ -143,14 +151,16 @@ export default function App() {
       </div>
 
       {/* 5. ABOUT SECTION — scrapbook collage (Framer export) */}
-      <div className="w-full flex justify-center py-20 overflow-hidden">
+      <div id="about" className="w-full flex justify-center py-20 overflow-hidden scroll-mt-10">
         <div className="framer-scale-wrap">
           <AboutSectionFramer />
         </div>
       </div>
 
       {/* 4. FOOTER SECTION */}
-      <FooterSection />
+      <div id="connect" className="scroll-mt-10">
+        <FooterSection />
+      </div>
 
     </div>
   );

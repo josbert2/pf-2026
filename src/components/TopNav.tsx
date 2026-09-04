@@ -9,7 +9,7 @@ export default function TopNav() {
      
 
       {/* Navigation Links */}
-      <NavLink href="#about" label="about" forceHover={false} />
+      <NavLink href="/about" label="about" forceHover={false} />
       <NavLink href="/work" label="Work" />
       <NavLink href="#connect" label="Connect" />
     </nav>
@@ -23,8 +23,9 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
   const shouldHover = DEBUG_HOVER || forceHover;
   
   return (
-    <motion.a
-      href={href}
+    // motion.div, not motion.a: the floating decorations render their own <a>
+    // tags and nested anchors are invalid HTML (breaks React hydration).
+    <motion.div
       className="relative group block"
       whileHover="hover"
       initial="initial"
@@ -115,13 +116,13 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
               <div className="relative w-full h-full">
                 {/* Navie 4 (Cuadro) */}
                 <img 
-                  src="https://framerusercontent.com/images/WZygymu5Y0XTj6exkgElJgDet8.png?width=254&height=319" 
+                  src="/work-clone/framer/images/WZygymu5Y0XTj6exkgElJgDet8.png" 
                   alt="Frame"
                   className="absolute inset-0 w-full h-full object-contain"
                 />
                 {/* Navie 5 (Adentro) */}
                 <img 
-                  src="https://framerusercontent.com/images/klvZtuhjeLBrHRuCnpOubsPLgI.png?width=82&height=91" 
+                  src="/work-clone/framer/images/klvZtuhjeLBrHRuCnpOubsPLgI.png" 
                   alt="Navie 5"
                   className="absolute left-[113%] top-[84%] -translate-x-1/2 -translate-y-1/2 w-10 h-auto"
                 />
@@ -208,14 +209,14 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
         >
           {/* LinkedIn Link */}
           <a
-            href="https://www.linkedin.com/in/jackie-zhang-designer/"
+            href="https://www.linkedin.com/in/josbert-hernandez-317b77113/"
             target="_blank"
             rel="noopener"
             className="w-7 h-7 flex flex-col items-center justify-center pointer-events-auto hover:scale-110 transition-transform"
             style={{ rotate: '10deg' }}
           >
             <img 
-              src="https://framerusercontent.com/images/sQTVrMmvyy0ZAP9a11y78iBE0o.png?width=171&height=150" 
+              src="/work-clone/framer/images/sQTVrMmvyy0ZAP9a11y78iBE0o.png" 
               alt="LinkedIn"
               className="w-full h-auto"
             />
@@ -223,14 +224,14 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
 
           {/* Twixxer Link */}
           <a
-            href="https://x.com/jackie_zhang_ls"
+            href="https://x.com/JosbertHern"
             target="_blank"
             rel="noopener"
             className="w-7 h-7 flex flex-col items-center justify-center pointer-events-auto hover:scale-110 transition-transform"
             style={{ rotate: '-11deg' }}
           >
             <img 
-              src="https://framerusercontent.com/images/kZimamADdUc1StlgrvwXr6WaZRc.png?width=163&height=157" 
+              src="/work-clone/framer/images/kZimamADdUc1StlgrvwXr6WaZRc.png" 
               alt="twixxer"
               className="w-full h-auto"
             />
@@ -238,14 +239,14 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
 
           {/* GitHub Link */}
           <a
-            href="https://github.com/jackielszhang"
+            href="https://github.com/josbert2"
             target="_blank"
             rel="noopener"
             className="w-7 h-7 flex flex-col items-center justify-center pointer-events-auto hover:scale-110 transition-transform"
             style={{ rotate: '-15deg' }}
           >
             <img 
-              src="https://framerusercontent.com/images/Yfit95qEPP022gKR3Is3XnmxRds.png?width=221&height=205" 
+              src="/work-clone/framer/images/Yfit95qEPP022gKR3Is3XnmxRds.png" 
               alt="github"
               className="w-full h-auto"
             />
@@ -255,9 +256,9 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
         </motion.div>
       </>
     )}
-      <p className="font-gochi text-[24px] md:text-[18px] text-paper hover:text-accent-red transition-colors duration-200 relative z-10">
+      <a href={href} className="block font-gochi text-[24px] md:text-[18px] text-paper hover:text-accent-red transition-colors duration-200 relative z-10">
         {label}
-      </p>
+      </a>
 
       {isAbout && (
         <>
@@ -292,7 +293,7 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
           {/* Floating Images (Navie) */}
           <div className="absolute inset-0 pointer-events-none -z-10">
             <motion.img 
-              src="https://framerusercontent.com/images/nXkHodrIJijHtkJK9tj0meJSo.png?width=125&height=135"
+              src="/work-clone/framer/images/nXkHodrIJijHtkJK9tj0meJSo.png"
               alt="Navie 1"
               className="absolute w-8 h-auto"
               style={{ top: '-36px', left: '-13%', marginLeft: '-28px' }}
@@ -301,7 +302,7 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
               transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
             />
             <motion.img 
-              src="https://framerusercontent.com/images/Js58O0WeXiEecnME3wucn8P1Lg.png?width=125&height=99"
+              src="/work-clone/framer/images/Js58O0WeXiEecnME3wucn8P1Lg.png"
               alt="Navie 2"
               className="absolute w-8 h-auto"
               style={{ top: '17px', left: '-34px' }}
@@ -310,7 +311,7 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
               transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1], delay: 0.05 }}
             />
             <motion.img 
-              src="https://framerusercontent.com/images/so1wZgMvJhjB3P40EWwFAbrMls.png?width=110&height=106"
+              src="/work-clone/framer/images/so1wZgMvJhjB3P40EWwFAbrMls.png"
               alt="Navie 3"
               className="absolute w-8 h-auto"
               style={{ top: '-39px', right: '-43px' }}
@@ -334,6 +335,6 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
            <div className="w-full h-full h-full" />
         </motion.div>
       )}
-    </motion.a>
+    </motion.div>
   );
 }

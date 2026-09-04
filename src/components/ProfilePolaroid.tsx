@@ -12,7 +12,7 @@ export default function ProfilePolaroid() {
       >
         <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-[#e8e4d9]">
           <img
-            src="https://framerusercontent.com/images/X8TlTAmfaqh8FaOYxjSjYMniaE.png" 
+            src="/work-clone/framer/images/X8TlTAmfaqh8FaOYxjSjYMniaE.png" 
             alt="Jackie Zhang"
             className="w-full h-full object-cover"
             loading="lazy"

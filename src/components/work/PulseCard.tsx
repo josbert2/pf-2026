@@ -1,3 +1,4 @@
+// @ts-nocheck -- generated Framer export; not hand-typechecked (Vite/esbuild still builds it)
 import React from "react";
 import "./PulseCard.css";
 

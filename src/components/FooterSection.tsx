@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const CHECKLIST_ITEMS = [
   "Impactful work",
@@ -149,7 +149,7 @@ export default function FooterSection() {
           {/* Red hand-drawn rectangle (decorative image) */}
           <div className="hidden md:block w-[311px] h-[308px] shrink-0">
             <img
-              src="https://framerusercontent.com/images/iSwyFpVCzzKTbmhtq2Gakc2k5Xk.png?scale-down-to=1024&width=1602&height=1586"
+              src="/work-clone/framer/images/iSwyFpVCzzKTbmhtq2Gakc2k5Xk.png"
               alt="Hand-drawn rectangle"
               className="w-full h-full object-contain"
               style={{ borderRadius: 22 }}
@@ -180,7 +180,7 @@ export default function FooterSection() {
           {/* Giphy */}
           <div className="w-full overflow-hidden rounded-xl">
             <img
-              src="https://framerusercontent.com/images/7DHkysRvD4huqiyxAljijYYcc.gif?width=480&height=270"
+              src="/work-clone/framer/images/7DHkysRvD4huqiyxAljijYYcc.gif"
               alt="I need to chat with you"
               className="w-full h-auto object-cover"
               loading="lazy"
@@ -198,7 +198,7 @@ export default function FooterSection() {
         <div className="relative w-full hidden lg:block" style={{ height: 250 }}>
           {/* Slice 45 — flowers (left) */}
           <img
-            src="https://framerusercontent.com/images/FRkj7J6yOqj9bBSMBJF7zdRGrY.png?width=381&height=325"
+            src="/work-clone/framer/images/FRkj7J6yOqj9bBSMBJF7zdRGrY.png"
             alt="Flowers doodle"
             className="absolute"
             style={{ left: 0, top: 0, width: 191, height: 163 }}
@@ -207,7 +207,7 @@ export default function FooterSection() {
 
           {/* Slice 35 — bird (right-ish) */}
           <img
-            src="https://framerusercontent.com/images/raBEoGeB7wmHSyDXXPu6VzQPAg.png?width=242&height=232"
+            src="/work-clone/framer/images/raBEoGeB7wmHSyDXXPu6VzQPAg.png"
             alt="Bird doodle"
             className="absolute"
             style={{ right: 299, top: 114, width: 121, height: 116 }}
@@ -216,7 +216,7 @@ export default function FooterSection() {
 
           {/* Slice 48 — computer+bird (far right) */}
           <img
-            src="https://framerusercontent.com/images/zbVoYsGmG4nEEedbtgkv5193W6I.png?width=413&height=392"
+            src="/work-clone/framer/images/zbVoYsGmG4nEEedbtgkv5193W6I.png"
             alt="Computer bird doodle"
             className="absolute"
             style={{ right: 0, bottom: 0, width: 207, height: 196 }}
@@ -225,7 +225,7 @@ export default function FooterSection() {
 
           {/* Slice 52 — more flowers (left side lower) */}
           <img
-            src="https://framerusercontent.com/images/EYbfG6roNwIxhPystqzDKOK4.png?width=401&height=464"
+            src="/work-clone/framer/images/EYbfG6roNwIxhPystqzDKOK4.png"
             alt="Flowers doodle 2"
             className="absolute"
             style={{ left: 85, bottom: 0, width: 201, height: 233 }}

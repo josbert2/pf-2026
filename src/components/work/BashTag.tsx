@@ -1,11 +1,10 @@
-import React from "react";
 import "@/styles/BashTag.css";
 
 const DEFAULT_STRING_IMAGE =
-  "https://framerusercontent.com/images/hRZhO7eXhzBNm1BR1adsCCBzNI.png?width=329&height=390";
+  "/work-clone/framer/images/hRZhO7eXhzBNm1BR1adsCCBzNI.png";
 
 const DEFAULT_ICON_IMAGE =
-  "https://framerusercontent.com/images/w8s7P5nmdg1ugki7c2YmcKGxU.png?width=199&height=199";
+  "/work-clone/framer/images/w8s7P5nmdg1ugki7c2YmcKGxU.png";
 
 export default function BashTag({
   percentage = "80%",

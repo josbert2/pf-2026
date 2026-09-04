@@ -1,0 +1,6 @@
+# Automatic HTTPS (Let's Encrypt) for $DOMAIN, reverse-proxying to the web
+# container. Point your DNS A/AAAA record at the host and set DOMAIN in .env.prod.
+{$DOMAIN} {
+	encode gzip zstd
+	reverse_proxy web:80
+}

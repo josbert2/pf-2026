@@ -1,3 +1,4 @@
+// @ts-nocheck -- generated Framer export; not hand-typechecked (Vite/esbuild still builds it)
 import React from "react";
 
 /**
@@ -54,8 +55,8 @@ export default function AboutSectionFramer() {
               width="734"
               height="355"
               sizes="125.5709px"
-              srcSet="https://framerusercontent.com/images/Bg0nbySqeUlxqYI6KKDaJ8mbJo.png?scale-down-to=512&width=734&height=355 512w,https://framerusercontent.com/images/Bg0nbySqeUlxqYI6KKDaJ8mbJo.png?width=734&height=355 734w"
-              src="https://framerusercontent.com/images/Bg0nbySqeUlxqYI6KKDaJ8mbJo.png?width=734&height=355"
+              srcSet="/work-clone/framer/images/Bg0nbySqeUlxqYI6KKDaJ8mbJo.png 512w,/work-clone/framer/images/Bg0nbySqeUlxqYI6KKDaJ8mbJo.png 734w"
+              src="/work-clone/framer/images/Bg0nbySqeUlxqYI6KKDaJ8mbJo.png"
               alt=""
               style={{
                 aspectRatio: "auto 734 / 355",
@@ -89,8 +90,8 @@ export default function AboutSectionFramer() {
               width="960"
               height="525"
               sizes="252.0231px"
-              srcSet="https://framerusercontent.com/images/DJ6zTo2EiDMZipwzcmZgjH2tNhU.png?scale-down-to=512&width=960&height=525 512w,https://framerusercontent.com/images/DJ6zTo2EiDMZipwzcmZgjH2tNhU.png?width=960&height=525 960w"
-              src="https://framerusercontent.com/images/DJ6zTo2EiDMZipwzcmZgjH2tNhU.png?width=960&height=525"
+              srcSet="/work-clone/framer/images/DJ6zTo2EiDMZipwzcmZgjH2tNhU.png 512w,/work-clone/framer/images/DJ6zTo2EiDMZipwzcmZgjH2tNhU.png 960w"
+              src="/work-clone/framer/images/DJ6zTo2EiDMZipwzcmZgjH2tNhU.png"
               alt=""
               style={{
                 aspectRatio: "auto 960 / 525",
@@ -695,7 +696,7 @@ export default function AboutSectionFramer() {
                 <div
                   style={{
                     backgroundImage:
-                      'url("https://framerusercontent.com/images/9G25ruOgt322clA0e0vFrw4RNEs.png?width=300&height=300")',
+                      'url("/work-clone/framer/images/9G25ruOgt322clA0e0vFrw4RNEs.png")',
                     backgroundSize: "183px",
                     height: "770px",
                     position: "absolute",
@@ -822,8 +823,8 @@ export default function AboutSectionFramer() {
                         width="2876"
                         height="2870"
                         sizes="max(234px - 20px, 1px)"
-                        srcSet="https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?scale-down-to=512&width=2876&height=2870 512w,https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?scale-down-to=1024&width=2876&height=2870 1024w,https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?scale-down-to=2048&width=2876&height=2870 2048w,https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?width=2876&height=2870 2876w"
-                        src="https://framerusercontent.com/images/x3y7QRdmiIS5JFAwhWC4IHHHJsE.png?width=2876&height=2870"
+                        srcSet="/work-clone/josbert/wasin-features.png 512w,/work-clone/josbert/wasin-features.png 1024w,/work-clone/josbert/wasin-features.png 2048w,/work-clone/josbert/wasin-features.png 2876w"
+                        src="/work-clone/josbert/wasin-features.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 2876 / 2870",
@@ -926,8 +927,8 @@ export default function AboutSectionFramer() {
                         width="1980"
                         height="1202"
                         sizes="max(300px - 20px, 1px)"
-                        srcSet="https://framerusercontent.com/images/gaaYI25iUJhP2n1xmahYjO3XRY.png?scale-down-to=512&width=1980&height=1202 512w,https://framerusercontent.com/images/gaaYI25iUJhP2n1xmahYjO3XRY.png?scale-down-to=1024&width=1980&height=1202 1024w,https://framerusercontent.com/images/gaaYI25iUJhP2n1xmahYjO3XRY.png?width=1980&height=1202 1980w"
-                        src="https://framerusercontent.com/images/gaaYI25iUJhP2n1xmahYjO3XRY.png?width=1980&height=1202"
+                        srcSet="/work-clone/josbert/erp-hero.png 512w,/work-clone/josbert/erp-hero.png 1024w,/work-clone/josbert/erp-hero.png 1980w"
+                        src="/work-clone/josbert/erp-hero.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 1980 / 1202",
@@ -1022,8 +1023,8 @@ export default function AboutSectionFramer() {
                         width="1360"
                         height="1394"
                         sizes="max(242px - 20px, 1px)"
-                        srcSet="https://framerusercontent.com/images/cmpsfHDSBvMIVkOtMJffhTk8HA.png?scale-down-to=1024&width=1360&height=1394 999w,https://framerusercontent.com/images/cmpsfHDSBvMIVkOtMJffhTk8HA.png?width=1360&height=1394 1360w"
-                        src="https://framerusercontent.com/images/cmpsfHDSBvMIVkOtMJffhTk8HA.png?width=1360&height=1394"
+                        srcSet="/work-clone/josbert/josbert-about.png 999w,/work-clone/josbert/josbert-about.png 1360w"
+                        src="/work-clone/josbert/josbert-about.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 1360 / 1394",
@@ -1131,8 +1132,8 @@ export default function AboutSectionFramer() {
                         width="2688"
                         height="1534"
                         sizes="max(311px - 20px, 1px)"
-                        srcSet="https://framerusercontent.com/images/OqvkDghj18vNLRheWfCb9I9ZC5M.png?scale-down-to=512&width=2688&height=1534 512w,https://framerusercontent.com/images/OqvkDghj18vNLRheWfCb9I9ZC5M.png?scale-down-to=1024&width=2688&height=1534 1024w,https://framerusercontent.com/images/OqvkDghj18vNLRheWfCb9I9ZC5M.png?scale-down-to=2048&width=2688&height=1534 2048w,https://framerusercontent.com/images/OqvkDghj18vNLRheWfCb9I9ZC5M.png?width=2688&height=1534 2688w"
-                        src="https://framerusercontent.com/images/OqvkDghj18vNLRheWfCb9I9ZC5M.png?width=2688&height=1534"
+                        srcSet="/work-clone/josbert/wasin-hero.png 512w,/work-clone/josbert/wasin-hero.png 1024w,/work-clone/josbert/wasin-hero.png 2048w,/work-clone/josbert/wasin-hero.png 2688w"
+                        src="/work-clone/josbert/wasin-hero.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 2688 / 1534",
@@ -1227,8 +1228,8 @@ export default function AboutSectionFramer() {
                         width="1528"
                         height="2431"
                         sizes="max(276px - 20px, 1px)"
-                        srcSet="https://framerusercontent.com/images/SMhadH5n5CuLH7ZXJnFHzzfUI7k.png?scale-down-to=1024&width=1528&height=2431 643w,https://framerusercontent.com/images/SMhadH5n5CuLH7ZXJnFHzzfUI7k.png?scale-down-to=2048&width=1528&height=2431 1287w,https://framerusercontent.com/images/SMhadH5n5CuLH7ZXJnFHzzfUI7k.png?width=1528&height=2431 1528w"
-                        src="https://framerusercontent.com/images/SMhadH5n5CuLH7ZXJnFHzzfUI7k.png?width=1528&height=2431"
+                        srcSet="/work-clone/josbert/wasin-mobile.png 643w,/work-clone/josbert/wasin-mobile.png 1287w,/work-clone/josbert/wasin-mobile.png 1528w"
+                        src="/work-clone/josbert/wasin-mobile.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 1528 / 2431",
@@ -1318,8 +1319,8 @@ export default function AboutSectionFramer() {
                         width="1696"
                         height="1394"
                         sizes="max(244px - 20px, 1px)"
-                        srcSet="https://framerusercontent.com/images/HUqtxwLIEIp2z66d1Rbksv2PbbY.png?scale-down-to=512&width=1696&height=1394 512w,https://framerusercontent.com/images/HUqtxwLIEIp2z66d1Rbksv2PbbY.png?scale-down-to=1024&width=1696&height=1394 1024w,https://framerusercontent.com/images/HUqtxwLIEIp2z66d1Rbksv2PbbY.png?width=1696&height=1394 1696w"
-                        src="https://framerusercontent.com/images/HUqtxwLIEIp2z66d1Rbksv2PbbY.png?width=1696&height=1394"
+                        srcSet="/work-clone/josbert/erp-pos.png 512w,/work-clone/josbert/erp-pos.png 1024w,/work-clone/josbert/erp-pos.png 1696w"
+                        src="/work-clone/josbert/erp-pos.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 1696 / 1394",
@@ -1409,8 +1410,8 @@ export default function AboutSectionFramer() {
                         width="1774"
                         height="1560"
                         sizes="max(297px - 20px, 1px)"
-                        srcSet="https://framerusercontent.com/images/Wiw196PFt5v5LcQxgcrCUB3F0.png?scale-down-to=512&width=1774&height=1560 512w,https://framerusercontent.com/images/Wiw196PFt5v5LcQxgcrCUB3F0.png?scale-down-to=1024&width=1774&height=1560 1024w,https://framerusercontent.com/images/Wiw196PFt5v5LcQxgcrCUB3F0.png?width=1774&height=1560 1774w"
-                        src="https://framerusercontent.com/images/Wiw196PFt5v5LcQxgcrCUB3F0.png?width=1774&height=1560"
+                        srcSet="/work-clone/josbert/josbert-projects.png 512w,/work-clone/josbert/josbert-projects.png 1024w,/work-clone/josbert/josbert-projects.png 1774w"
+                        src="/work-clone/josbert/josbert-projects.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 1774 / 1560",
@@ -1515,8 +1516,8 @@ export default function AboutSectionFramer() {
                         width="1984"
                         height="1400"
                         sizes="max(311px - 20px, 1px)"
-                        srcSet="https://framerusercontent.com/images/Isusj1Nh2i04aFkiuiBVhYCfec.png?scale-down-to=512&width=1984&height=1400 512w,https://framerusercontent.com/images/Isusj1Nh2i04aFkiuiBVhYCfec.png?scale-down-to=1024&width=1984&height=1400 1024w,https://framerusercontent.com/images/Isusj1Nh2i04aFkiuiBVhYCfec.png?width=1984&height=1400 1984w"
-                        src="https://framerusercontent.com/images/Isusj1Nh2i04aFkiuiBVhYCfec.png?width=1984&height=1400"
+                        srcSet="/work-clone/josbert/erp-cta.png 512w,/work-clone/josbert/erp-cta.png 1024w,/work-clone/josbert/erp-cta.png 1984w"
+                        src="/work-clone/josbert/erp-cta.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 1984 / 1400",
@@ -1611,8 +1612,8 @@ export default function AboutSectionFramer() {
                         width="1546"
                         height="1894"
                         sizes="max(202px - 20px, 1px)"
-                        srcSet="https://framerusercontent.com/images/5YyYUryAtcl0ESyOgNb4S9dajw.png?scale-down-to=1024&width=1546&height=1894 835w,https://framerusercontent.com/images/5YyYUryAtcl0ESyOgNb4S9dajw.png?width=1546&height=1894 1546w"
-                        src="https://framerusercontent.com/images/5YyYUryAtcl0ESyOgNb4S9dajw.png?width=1546&height=1894"
+                        srcSet="/work-clone/josbert/josbert-hero-mobile.png 835w,/work-clone/josbert/josbert-hero-mobile.png 1546w"
+                        src="/work-clone/josbert/josbert-hero-mobile.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 1546 / 1894",
@@ -1956,8 +1957,8 @@ export default function AboutSectionFramer() {
                         width="1604"
                         height="1608"
                         sizes="164.9207px"
-                        srcSet="https://framerusercontent.com/images/ijsWM5MtUuc1y8pWtiDWBHCnuXg.png?scale-down-to=1024&width=1604&height=1608 1021w,https://framerusercontent.com/images/ijsWM5MtUuc1y8pWtiDWBHCnuXg.png?width=1604&height=1608 1604w"
-                        src="https://framerusercontent.com/images/ijsWM5MtUuc1y8pWtiDWBHCnuXg.png?scale-down-to=1024&width=1604&height=1608"
+                        srcSet="/work-clone/josbert/josbert-photo.png 1021w,/work-clone/josbert/josbert-photo.png 1604w"
+                        src="/work-clone/josbert/josbert-photo.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 1604 / 1608",
@@ -2009,7 +2010,7 @@ export default function AboutSectionFramer() {
                             loading="lazy"
                             width="312"
                             height="303"
-                            src="https://framerusercontent.com/images/QWXam9QLMP7h8aAPrYCUdNZl1NY.png?width=312&height=303"
+                            src="/work-clone/framer/images/QWXam9QLMP7h8aAPrYCUdNZl1NY.png"
                             alt=""
                             style={{
                               aspectRatio: "auto 312 / 303",
@@ -2052,7 +2053,7 @@ export default function AboutSectionFramer() {
                         loading="lazy"
                         width="77"
                         height="74"
-                        src="https://framerusercontent.com/images/w8dKj6vDnhmgdoMID29PJNlVk.png?width=77&height=74"
+                        src="/work-clone/framer/images/w8dKj6vDnhmgdoMID29PJNlVk.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 77 / 74",
@@ -2093,7 +2094,7 @@ export default function AboutSectionFramer() {
                         loading="lazy"
                         width="76"
                         height="103"
-                        src="https://framerusercontent.com/images/YcMQ4LDYe2uFjG6e4POBXesRqRQ.png?width=76&height=103"
+                        src="/work-clone/framer/images/YcMQ4LDYe2uFjG6e4POBXesRqRQ.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 76 / 103",
@@ -2133,7 +2134,7 @@ export default function AboutSectionFramer() {
                         loading="lazy"
                         width="155"
                         height="134"
-                        src="https://framerusercontent.com/images/tPjAa3EQM91M0Z9hdHatIpe1Eg.png?width=155&height=134"
+                        src="/work-clone/framer/images/tPjAa3EQM91M0Z9hdHatIpe1Eg.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 155 / 134",
@@ -2173,7 +2174,7 @@ export default function AboutSectionFramer() {
                         loading="lazy"
                         width="99"
                         height="67"
-                        src="https://framerusercontent.com/images/Bn3VpwjRmAnbu3IuroXVQVvQM.png?width=99&height=67"
+                        src="/work-clone/framer/images/Bn3VpwjRmAnbu3IuroXVQVvQM.png"
                         alt=""
                         style={{
                           aspectRatio: "auto 99 / 67",

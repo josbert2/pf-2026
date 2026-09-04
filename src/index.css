@@ -77,15 +77,15 @@
 }
 
 /* --- Awesome Serif --- */
-@font-face { font-family: "Awesome Serif Tall"; src: url("https://framerusercontent.com/assets/N2ArrH09gjgjTNCCXKAdW2TdE.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
-@font-face { font-family: "Awesome Serif Regular"; src: url("https://framerusercontent.com/assets/MniN0KGddYSqaVLm5RLF1RyPuw.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
-@font-face { font-family: "Awesome Serif Bold Regular"; src: url("https://framerusercontent.com/assets/yLFGRiTO2wTznoxTmnkvGnOwhUM.woff2"); font-display: swap; font-style: normal; font-weight: 700 }
+@font-face { font-family: "Awesome Serif Tall"; src: url("/work-clone/framer/assets/N2ArrH09gjgjTNCCXKAdW2TdE.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
+@font-face { font-family: "Awesome Serif Regular"; src: url("/work-clone/framer/assets/MniN0KGddYSqaVLm5RLF1RyPuw.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
+@font-face { font-family: "Awesome Serif Bold Regular"; src: url("/work-clone/framer/assets/yLFGRiTO2wTznoxTmnkvGnOwhUM.woff2"); font-display: swap; font-style: normal; font-weight: 700 }
 
 /* --- Departure Mono --- */
-@font-face { font-family: "Departure Mono Regular"; src: url("https://framerusercontent.com/assets/6xvpVClQT7SKWyqlm4DCB8L8Y.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
+@font-face { font-family: "Departure Mono Regular"; src: url("/work-clone/framer/assets/6xvpVClQT7SKWyqlm4DCB8L8Y.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
 
 /* --- Inter --- */
-@font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2"); font-display: swap; font-style: normal; font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("/work-clone/framer/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2"); font-display: swap; font-style: normal; font-weight: 400; }
 
 @theme {
   --font-serif: "Instrument Serif", serif;
@@ -130,6 +130,10 @@
   --grid-blue: var(--color-grid-blue);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-mono);
   background-color: var(--bg-desk);
@@ -148,7 +152,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
+  background-image: url('/work-clone/framer/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
   background-size: 153px;
   background-repeat: repeat;
   opacity: 0.1;
