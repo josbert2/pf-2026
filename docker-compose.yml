@@ -66,6 +66,17 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       CORS_ORIGIN: ${CORS_ORIGIN}
       PORT: 3001
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      # CMS uploads: R2 when all R2_* + UPLOADS_PUBLIC_URL are set, else the volume below.
+      R2_ENDPOINT: ${R2_ENDPOINT:-}
+      R2_ACCESS_KEY_ID: ${R2_ACCESS_KEY_ID:-}
+      R2_SECRET_ACCESS_KEY: ${R2_SECRET_ACCESS_KEY:-}
+      R2_BUCKET: ${R2_BUCKET:-}
+      R2_REGION: ${R2_REGION:-auto}
+      UPLOADS_PUBLIC_URL: ${UPLOADS_PUBLIC_URL:-}
+    volumes:
+      - uploads-data:/app/uploads
     depends_on:
       mysql:
         condition: service_healthy
@@ -101,5 +112,6 @@ services:
       start_period: 10s
 
 volumes:
+  uploads-data:
   mysql-data:
   minio-data:

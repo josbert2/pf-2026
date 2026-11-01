@@ -53,8 +53,47 @@ bun run dev                                   # vite-react-ssg dev
 - Schema: `db/init/01-schema.sql` (loaded on first MySQL boot).
 - The API **auto-seeds** from `src/data/work-projects.json` the first time the
   tables are empty (`server/src/seed.ts`), then serves the exact same shape.
-- Edit content in Adminer (or SQL); the site picks it up on next load — no
-  rebuild. The bundled JSON is only the prerender/offline fallback.
+- Edit content from the CMS at `/admin` (or Adminer/SQL); the site picks it up
+  on next load — no rebuild. The bundled JSON is only the prerender/offline
+  fallback.
+- Later schema changes are applied by the API on boot (`server/src/migrate.ts`,
+  idempotent), since `db/init` only runs on a fresh volume.
+
+## CMS (`/admin`)
+
+Single-admin panel (lazy-loaded chunk, `noindex`) to edit:
+
+| Tab | Source | Stored in |
+| --- | --- | --- |
+| Work | projects, notable work, side quests, labels | `projects`, `project_notable_work`, `side_quests`, `content_meta` |
+| Home / About / Footer | page copy | `site_content` (one JSON doc per key; defaults in `src/data/site-content.json`) |
+
+- **Login**: the first admin is created on API boot from `ADMIN_EMAIL` /
+  `ADMIN_PASSWORD` (only if no admin exists). Session = HttpOnly `pf_session`
+  cookie (`path=/api`, `Secure` in production, 30 days), stored hashed in
+  `admin_sessions`. Login is throttled (5 failures / 15 min per IP).
+- **Images**: "Subir imagen" posts to `/api/admin/uploads` (PNG/JPEG/GIF/WebP/AVIF
+  by magic bytes, ≤ 8 MB). With `R2_*` **and** `UPLOADS_PUBLIC_URL` set they go
+  to R2; otherwise to the API's `uploads-data` volume, served at `/api/uploads/*`.
+- **/work layout**: it's a fixed Framer composition bound by position, so it
+  renders the first 4 projects and 5 side quests in panel order. Extra rows are
+  kept but not shown.
+- Pages render the bundled defaults first (SSG), then swap in the CMS copy;
+  missing fields fall back to the defaults.
+
+API: `POST /api/auth/login|logout`, `GET /api/auth/me`; under `/api/admin/*`
+(session required, JSON or multipart only): `GET/POST /projects`,
+`PUT/DELETE /projects/:id`, `PUT /projects/order`, same for `/side-quests`,
+`PUT /meta`, `GET/PUT /site/:key`, `POST /uploads`. Public: `GET /api/content`,
+`GET /api/site/:key`, `GET /api/uploads/*`.
+
+## Languages (EN / ES)
+
+- English at `/`, `/work`, `/about`; Spanish at `/es`, `/es/work`, `/es/about`. Both are prerendered, with `hreflang` alternates and `<html lang>`.
+- **Detection (nginx, `nginx.conf`):** on the English pages, the `lang` cookie wins (set by the EN/ES switcher in the top-right corner). With no cookie, a browser whose first `Accept-Language` is Spanish gets a 302 to `/es…`. Crawlers (no header) stay on English. Vite dev has no nginx, so there you open `/es` by hand.
+- **Content:** page documents are stored as `home`, `home:es`…; projects and side quests keep translations in an `i18n` JSON column; work titles/labels are `title:es`… in `content_meta`. Empty translated fields fall back to English. Edit them in `/admin` with the EN / ES toggle.
+- Bundled translations: `src/data/site-content.es.json` and the `i18n` keys in `src/data/work-projects.json`. On boot the API backfills them only where nothing is stored yet.
+- Interface strings (menu, 404) live in `src/lib/i18n.tsx`.
 
 ## Assets / R2
 
