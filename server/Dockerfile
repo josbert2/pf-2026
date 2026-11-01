@@ -9,6 +9,8 @@ RUN npm install --no-audit --no-fund
 COPY server/tsconfig.json ./tsconfig.json
 COPY server/src ./src
 COPY src/data/work-projects.json /app/seed-data.json
+COPY src/data/site-content.json /app/site-defaults.json
+COPY src/data/site-content.es.json /app/site-defaults.es.json
 
 ENV NODE_ENV=production
 ENV PORT=3001

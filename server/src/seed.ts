@@ -1,5 +1,5 @@
 import { readFileSync, existsSync } from "node:fs";
-import type { RowDataPacket } from "mysql2";
+import type { ResultSetHeader, RowDataPacket } from "mysql2";
 import { pool } from "./db.js";
 import type { Content } from "./types.js";
 
@@ -25,13 +25,14 @@ function loadSeed(): Content | null {
  * Idempotent: if `projects` already has rows, it does nothing.
  */
 export async function seedIfEmpty(): Promise<void> {
+  const data = loadSeed();
   const [rows] = await pool.query<RowDataPacket[]>("SELECT COUNT(*) AS n FROM projects");
   if (Number(rows[0].n) > 0) {
     console.log("[seed] projects already present, skipping");
+    if (data) await backfillTranslations(data);
     return;
   }
 
-  const data = loadSeed();
   if (!data) {
     console.warn("[seed] no seed file found, leaving DB empty");
     return;
@@ -46,17 +47,21 @@ export async function seedIfEmpty(): Promise<void> {
       "label_notable_work", data.labels?.notable_work ?? "Notable work",
       "label_side_quests", data.labels?.side_quests ?? "Side Quests",
     ]);
+    for (const [key, value] of metaTranslations(data)) {
+      await conn.query("INSERT INTO content_meta (`key`, `value`) VALUES (?, ?)", [key, value]);
+    }
 
     let pOrder = 0;
     for (const p of data.projects ?? []) {
       const [res] = await conn.query(
         `INSERT INTO projects
-           (slug, name, url, tagline, tagline_l1, tagline_l2, tagline_l3, lesson, highlight, year, sort_order)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+           (slug, name, url, tagline, tagline_l1, tagline_l2, tagline_l3, lesson, highlight, year, image_url, i18n, sort_order)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           p.id, p.name, p.url ?? null, p.tagline ?? null,
           p.tagline_l1 ?? null, p.tagline_l2 ?? null, p.tagline_l3 ?? null,
-          p.lesson ?? null, p.highlight ?? null, p.year ?? null, pOrder++,
+          p.lesson ?? null, p.highlight ?? null, p.year ?? null, p.image_url ?? null,
+          p.i18n ? JSON.stringify(p.i18n) : null, pOrder++,
         ],
       );
       const projectId = (res as { insertId: number }).insertId;
@@ -72,9 +77,13 @@ export async function seedIfEmpty(): Promise<void> {
     let sOrder = 0;
     for (const s of data.side_quests ?? []) {
       await conn.query(
-        `INSERT INTO side_quests (slug, name, role, description, url, year, sort_order)
-         VALUES (?, ?, ?, ?, ?, ?, ?)`,
-        [s.id, s.name, s.role ?? null, s.description ?? null, s.url ?? null, s.year ?? null, sOrder++],
+        `INSERT INTO side_quests (slug, name, tag, role, description, url, repo_url, image_url, year, i18n, sort_order)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [
+          s.id, s.name, s.tag ?? null, s.role ?? null, s.description ?? null, s.url ?? null,
+          s.repo_url ?? null, s.image_url ?? null, s.year ?? null,
+          s.i18n ? JSON.stringify(s.i18n) : null, sOrder++,
+        ],
       );
     }
 
@@ -86,4 +95,39 @@ export async function seedIfEmpty(): Promise<void> {
   } finally {
     conn.release();
   }
+}
+
+/** content_meta rows for the translated title/labels ("title:es"…). */
+function metaTranslations(data: Content): Array<[string, string]> {
+  const out: Array<[string, string]> = [];
+  for (const [lang, t] of Object.entries(data.i18n ?? {})) {
+    if (t.title) out.push([`title:${lang}`, t.title]);
+    if (t.labels?.notable_work) out.push([`label_notable_work:${lang}`, t.labels.notable_work]);
+    if (t.labels?.side_quests) out.push([`label_side_quests:${lang}`, t.labels.side_quests]);
+  }
+  return out;
+}
+
+/**
+ * DBs seeded before translations existed: fill in the bundled translations
+ * where nothing is stored yet. Rows edited in the panel always have a
+ * non-NULL i18n, so this never overwrites the admin's work.
+ */
+async function backfillTranslations(data: Content): Promise<void> {
+  let n = 0;
+  for (const [table, items] of [["projects", data.projects ?? []], ["side_quests", data.side_quests ?? []]] as const) {
+    for (const item of items) {
+      if (!item.i18n) continue;
+      const [res] = await pool.query<ResultSetHeader>(
+        `UPDATE ${table} SET i18n = ? WHERE slug = ? AND i18n IS NULL`,
+        [JSON.stringify(item.i18n), item.id],
+      );
+      n += res.affectedRows;
+    }
+  }
+  for (const [key, value] of metaTranslations(data)) {
+    const [res] = await pool.query<ResultSetHeader>("INSERT IGNORE INTO content_meta (`key`, `value`) VALUES (?, ?)", [key, value]);
+    n += res.affectedRows;
+  }
+  if (n) console.log(`[seed] backfilled ${n} translation(s)`);
 }

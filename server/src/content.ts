@@ -1,5 +1,6 @@
 import type { RowDataPacket } from "mysql2";
 import { pool } from "./db.js";
+import { TRANSLATED } from "./lang.js";
 import type { Content, Project, SideQuest } from "./types.js";
 
 /**
@@ -33,18 +34,37 @@ export async function getContent(): Promise<Content> {
     if (r.lesson) p.lesson = r.lesson;
     if (r.highlight) p.highlight = r.highlight;
     if (r.year) p.year = r.year;
+    if (r.image_url) p.image_url = r.image_url;
     if (notable.length) p.notable_work = notable;
+    if (r.i18n) p.i18n = r.i18n;
     return p;
   });
 
   const side_quests: SideQuest[] = sqRows.map((r) => ({
     id: r.slug,
     name: r.name,
+    tag: r.tag ?? null,
     role: r.role ?? null,
     description: r.description ?? null,
     url: r.url ?? null,
     year: r.year ?? null,
+    repo_url: r.repo_url ?? null,
+    image_url: r.image_url ?? null,
+    ...(r.i18n ? { i18n: r.i18n } : {}),
   }));
+
+  // content_meta stores translations as "title:es", "label_side_quests:es"…
+  const i18n: NonNullable<Content["i18n"]> = {};
+  for (const lang of TRANSLATED) {
+    const t = meta[`title:${lang}`];
+    const nw = meta[`label_notable_work:${lang}`];
+    const sq = meta[`label_side_quests:${lang}`];
+    if (!t && !nw && !sq) continue;
+    i18n[lang] = {
+      ...(t ? { title: t } : {}),
+      labels: { ...(nw ? { notable_work: nw } : {}), ...(sq ? { side_quests: sq } : {}) },
+    };
+  }
 
   return {
     title: meta.title ?? "",
@@ -54,5 +74,6 @@ export async function getContent(): Promise<Content> {
     },
     projects,
     side_quests,
+    i18n,
   };
 }

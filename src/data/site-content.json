@@ -1,0 +1,89 @@
+{
+  "home": {
+    "role": "Frontend Engineer",
+    "role_sub": "& creative developer",
+    "headline": "Software should",
+    "headline_lead": "feel",
+    "headline_accent": "honest",
+    "location": "Santiago • GMT -3:00",
+    "values_caption": "3 things I strongly believe in",
+    "value_1": "tirelessly pursue clarity.",
+    "value_2": "Software should empower.",
+    "value_3": "Design for moments",
+    "about_title": "About me",
+    "about_question": "What's his deal?",
+    "about_quote": "Everything you do, do it with care."
+  },
+  "about": {
+    "level": "Senior level",
+    "headline": "For the past few years, I've been turning complex ideas into things you can click.",
+    "intro": "I'm a frontend engineer",
+    "intro_also": "but I'm also…",
+    "also": [
+      "a creative developer",
+      "an ai-powered coder",
+      "a ui/ux tinkerer",
+      "a saas builder",
+      "a night owl"
+    ],
+    "photo_url": "/work-clone/josbert/josbert-photo.png",
+    "photo_caption": "Josbert",
+    "gallery": [
+      {
+        "src": "/work-clone/josbert/wasin-hero.png",
+        "alt": "wasin"
+      },
+      {
+        "src": "/work-clone/josbert/erp-hero.png",
+        "alt": "bookforce ERP"
+      },
+      {
+        "src": "/work-clone/josbert/josbert-projects.png",
+        "alt": "side projects"
+      },
+      {
+        "src": "/work-clone/josbert/erp-pos.png",
+        "alt": "POS"
+      }
+    ],
+    "energy_title": "What gives me energy",
+    "energy": [
+      "Building products end to end",
+      "Shipping cool things",
+      "Working with tight-knit teams"
+    ],
+    "soul_title": "What fuels my soul",
+    "soul": [
+      "Late-night coding sessions",
+      "Good coffee",
+      "Creating things"
+    ],
+    "nerd_title": "Stuff that I'll nerd out on",
+    "nerd_subtitle": "(that is not frontend)",
+    "nerd": [
+      {
+        "k": "AI agents",
+        "v": "half my tools talk back to me"
+      },
+      {
+        "k": "Self-hosting",
+        "v": "everything runs in Docker"
+      },
+      {
+        "k": "Warzone stats",
+        "v": "my bot tracks the squad"
+      }
+    ]
+  },
+  "footer": {
+    "checklist_title": "What I look for",
+    "checklist": [
+      "Impactful work",
+      "Meaningful work",
+      "Diversed team of talented folks"
+    ],
+    "cta_label": "let's chat!",
+    "contact_email": "joheandroid@gmail.com",
+    "lyric": "Almost heaven, West Virginia.     Blue Ridge Mountains Shenandoah River .      Life is old there.      Older than the trees.      Younger than the mountains.      Growin like a breeze Country Roads,      take me home.      To the place I belong West Virginia, mountain momma.      Take me home, country roads."
+  }
+}

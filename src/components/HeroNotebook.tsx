@@ -1,7 +1,15 @@
-import { motion } from "motion/react";
+import { motion, useMotionTemplate, useScroll, useTransform } from "motion/react";
 import ValuesWidget from "./ValuesWidget";
+import Signature from "./Signature";
+import { useSiteContent } from "../lib/site-content";
 
 export default function HeroNotebook() {
+  const home = useSiteContent("home");
+  // The bottom page starts tilted away (book half-open) and flattens as you scroll.
+  const { scrollY } = useScroll();
+  const pageTilt = useTransform(scrollY, [0, 450], [60, 10]);
+  const pageTransform = useMotionTemplate`perspective(3310px) rotateX(${pageTilt}deg)`;
+
   return (
     <div className="relative md:w-[870px] mx-auto lg:max-w-5xl mx-auto flex flex-col items-center justify-center mt-10 md:mt-6 pointer-events-none" style={{ perspective: "4000px" }}>
       <div className="absolute top-0 left-0 framer-1hjpp53 h-full w-full bg-gradient-to-t from-[#e35342] " />
@@ -78,25 +86,9 @@ export default function HeroNotebook() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="flex flex-col mb-4 items-start"
                   >
-                     <svg width="164" height="53" viewBox="0 0 164 53" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-2 -ml-2 drop-shadow-sm">
-                        <path d="M5.98828 6.44025C11.9883 4.44025 19.9883 2.44025 25.9883 1.44025" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M15.9883 1.44025C17.9883 13.4402 19.9883 25.4402 17.9883 35.4402C15.9883 43.4402 9.98829 49.4402 3.98829 45.4402C-0.0117075 41.4402 0.988292 35.4402 4.98829 32.4402" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M31.9883 20.4402C26.9883 18.4402 20.9883 22.4402 20.9883 29.4402C20.9883 37.4402 27.9883 41.4402 33.9883 39.4402C39.9883 37.4402 43.9883 30.4402 40.9883 24.4402C38.9883 20.4402 33.9883 18.4402 31.9883 20.4402Z" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M54.9883 21.4402C50.9883 19.4402 43.9883 20.4402 42.9883 24.4402C41.9883 28.4402 46.9883 30.4402 50.9883 32.4402C54.9883 34.4402 56.9883 37.4402 53.9883 40.4402C50.9883 43.4402 44.9883 43.4402 40.9883 41.4402" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M56.9883 8.44025C57.9883 19.4402 59.9883 30.4402 60.9883 42.4402" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M60.9883 23.4402C65.9883 19.4402 72.9883 18.4402 75.9883 23.4402C79.9883 29.4402 76.9883 39.4402 71.9883 42.4402C66.9883 45.4402 60.9883 42.4402 59.9883 36.4402" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M79.9883 31.4402H95.9883" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M95.9882 31.4403C98.9882 27.4403 97.9882 22.4403 92.9882 21.4403C86.9882 20.4403 79.9882 24.4403 78.9882 30.4403C77.9882 36.4403 81.9882 43.4403 88.9882 44.4403C93.9882 44.4403 97.9882 41.4403 99.9882 38.4403" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M101.988 25.4402C102.988 32.4402 103.988 38.4402 104.988 45.4402" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M102.988 28.4402C105.988 23.4402 110.988 21.4402 114.988 22.4402C117.988 23.4402 118.988 26.4402 117.988 29.4402" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M124.988 9.44025C124.988 22.4402 123.988 34.4402 122.988 46.4402C122.988 49.4402 124.988 51.4402 127.988 50.4402C130.988 49.4402 133.988 46.4402 135.988 43.4402" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M118.988 23.4402C122.988 22.4402 127.988 22.4402 132.988 22.4402" stroke="#E35341" strokeWidth="2.88" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M149.988 20.4402C149.988 18.4402 151.988 17.4402 151.988 19.4402" stroke="#E35341" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M157.988 18.4402C157.988 16.4402 159.988 15.4402 159.988 17.4402" stroke="#E35341" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round"/>
-                        <path d="M148.988 25.4402C150.988 30.4402 156.988 32.4402 161.988 29.4402" stroke="#E35341" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round"/>
-                     </svg>
-                     <div aria-label="Frontend Engineer" className="flex items-center font-averia text-accent-red text-[26px] tracking-wide font-normal h-10 select-none">
-                        {[..."Frontend Engineer"].map((char, i) => (
+                     <Signature className="mb-2 -ml-2 drop-shadow-sm" />
+                     <div aria-label={home.role} className="flex items-center font-averia text-accent-red text-[26px] tracking-wide font-normal h-10 select-none">
+                        {[...home.role].map((char, i) => (
                            <div key={i} className="relative group inline-block pointer-events-auto cursor-default">
                               {/* Layout Stabilizer Letter (Averia) */}
                               <motion.span
@@ -125,7 +117,7 @@ export default function HeroNotebook() {
                         className="text-accent-red/90 text-[21px] rotate-[-2deg] -mt-1 select-none"
                         style={{ fontFamily: '"Gochi Hand", cursive' }}
                      >
-                        &amp; creative developer
+                        {home.role_sub}
                      </motion.div>
                   </motion.div>
                   
@@ -135,9 +127,9 @@ export default function HeroNotebook() {
                     transition={{ duration: 0.8, delay: 1.2 }}
                     className="font-awesome text-accent-red text-[45px] md:text-[80px] lg:text-[50px] leading-[1.1] tracking-tight mb-8"
                   >
-                     Software should <br/>
+                     {home.headline} <br/>
                      <span className="flex items-center gap-3 md:gap-4">
-                        feel <span className="font-gochi text-accent-red tracking-tighter text-[1.15em]">honest</span>
+                        {home.headline_lead} <span className="font-gochi text-accent-red tracking-tighter text-[1.15em]">{home.headline_accent}</span>
                      </span>
                   </motion.h1>
                   
@@ -147,7 +139,7 @@ export default function HeroNotebook() {
                     transition={{ duration: 0.8, delay: 1.5 }}
                     className="font-averia text-accent-red text-lg md:text-[20px] font-light tracking-[-0.04em] mt-2"
                   >
-                     Santiago • GMT -3:00
+                     {home.location}
                   </motion.p>
                </div>
                
@@ -177,9 +169,9 @@ export default function HeroNotebook() {
       </div>
 
       {/* 3. BOTTOM PAGE CONTAINER */}
-      <div 
+      <motion.div
         className="relative w-full rounded-b-[60px] overflow-visible origin-top"
-        style={{ transform: "perspective(3310px) rotateX(10deg)" }}
+        style={{ transform: pageTransform }}
       >
          <div>
             <div className="framer-wud5gd" data-framer-name="Image">
@@ -266,11 +258,16 @@ export default function HeroNotebook() {
          </div>
 
          {/* The Paper Bottom Page (No Grid) */}
-         <div className="relative z-10 mx-3 md:mx-6 mb-8 mt-0 bg-[#f2e3cf] rounded-t-[4px] rounded-b-[20px] overflow-clip min-h-[400px] md:min-h-[500px] shadow-[0px_4px_5px_2px_rgba(0,0,0,0.47)]">
-        <ValuesWidget />
-       
+         <div className="relative z-10 mx-3 md:mx-6 mb-8 mt-0 bg-[#f2e3cf] rounded-t-[4px] rounded-b-[20px] overflow-visible min-h-[400px] md:min-h-[500px] shadow-[0px_4px_5px_2px_rgba(0,0,0,0.47)]">
+        <p
+          className="absolute left-[150px] top-[24px] z-10 text-accent-red"
+          style={{ fontFamily: '"Awesome Serif Semi Bold Tall", serif', fontSize: 16, fontWeight: 600, fontStyle: "italic" }}
+        >
+          {home.values_caption}
+        </p>
+        <ValuesWidget pageTilt={pageTilt} values={[home.value_1, home.value_2, home.value_3]} />
          </div>
-      </div>
+      </motion.div>
     
     </div>
   );

@@ -1,4 +1,5 @@
 import fallback from "../data/work-projects.json";
+import type { Lang } from "./i18n";
 
 export interface Project {
   id: string;
@@ -12,15 +13,21 @@ export interface Project {
   notable_work?: string[];
   highlight?: string | null;
   year?: string | null;
+  image_url?: string | null;
+  i18n?: Record<string, Partial<Omit<Project, "i18n" | "id">>>;
 }
 
 export interface SideQuest {
   id: string;
   name: string;
+  tag?: string | null;
+  repo_url?: string | null;
   role?: string | null;
   description?: string | null;
   url?: string | null;
   year?: string | null;
+  image_url?: string | null;
+  i18n?: Record<string, Partial<Omit<SideQuest, "i18n" | "id">>>;
 }
 
 export interface Content {
@@ -28,6 +35,25 @@ export interface Content {
   labels: { notable_work: string; side_quests: string };
   projects: Project[];
   side_quests: SideQuest[];
+  i18n?: Record<string, { title?: string; labels?: Partial<Content["labels"]> }>;
+}
+
+const nonEmpty = <T extends object>(o: T | undefined): Partial<T> =>
+  Object.fromEntries(
+    Object.entries(o ?? {}).filter(([, v]) => v !== "" && v != null && !(Array.isArray(v) && !v.length)),
+  ) as Partial<T>;
+
+/** Overlay the translations for `lang`; untranslated fields stay English. */
+export function localizeContent(c: Content, lang: Lang): Content {
+  if (lang === "en") return c;
+  const t = c.i18n?.[lang];
+  return {
+    ...c,
+    title: t?.title || c.title,
+    labels: { ...c.labels, ...nonEmpty(t?.labels) },
+    projects: c.projects.map((p) => ({ ...p, ...nonEmpty(p.i18n?.[lang]) })),
+    side_quests: c.side_quests.map((q) => ({ ...q, ...nonEmpty(q.i18n?.[lang]) })),
+  };
 }
 
 /** Bundled content — used for prerender/SSG and as an offline fallback. */

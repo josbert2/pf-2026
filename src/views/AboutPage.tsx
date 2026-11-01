@@ -1,59 +1,30 @@
-import { Head } from "vite-react-ssg";
 import { motion } from "motion/react";
 import TopNav from "../components/TopNav";
 import LeftSidebar from "../components/LeftSidebar";
 import RightSidebar from "../components/RightSidebar";
 import FooterSection from "../components/FooterSection";
-import { SITE_URL } from "../lib/site";
+import { PageHead, useLang } from "../lib/i18n";
+import { useSiteContent } from "../lib/site-content";
 
 // Torn-paper top edge, like the notebook sheet ripped off the spiral binder.
 const TORN_EDGE =
   "polygon(0 14px, 2% 4px, 5% 12px, 8% 2px, 11% 10px, 14% 3px, 17% 13px, 20% 5px, 23% 11px, 26% 2px, 29% 12px, 32% 4px, 35% 10px, 38% 2px, 41% 13px, 44% 6px, 47% 11px, 50% 3px, 53% 12px, 56% 4px, 59% 10px, 62% 2px, 65% 13px, 68% 5px, 71% 11px, 74% 3px, 77% 12px, 80% 4px, 83% 10px, 86% 2px, 89% 12px, 92% 5px, 95% 11px, 98% 3px, 100% 12px, 100% 100%, 0 100%)";
 
-const ALSO = [
-  "a creative developer",
-  "an ai-powered coder",
-  "a ui/ux tinkerer",
-  "a saas builder",
-  "a night owl",
-];
-
-const ENERGY = [
-  "Building products end to end",
-  "Shipping cool things",
-  "Working with tight-knit teams",
-];
-
-const SOUL = [
-  "Late-night coding sessions",
-  "Good coffee",
-  "Creating things",
-];
-
-const NERD = [
-  { k: "AI agents", v: "half my tools talk back to me" },
-  { k: "Self-hosting", v: "everything runs in Docker" },
-  { k: "Warzone stats", v: "my bot tracks the squad" },
-];
-
 export default function AboutPage() {
+  const about = useSiteContent("about");
+  const lang = useLang();
   return (
     <div className="min-h-screen relative font-mono overflow-hidden flex flex-col">
-      <Head>
-        <title>About — josbert</title>
-        <meta
-          name="description"
-          content="Who's Josbert? Frontend engineer & creative developer from Santiago — turning complex ideas into things you can click."
-        />
-        <link rel="canonical" href={`${SITE_URL}/about`} />
-        <meta property="og:title" content="About — josbert" />
-        <meta
-          property="og:description"
-          content="Frontend engineer & creative developer from Santiago."
-        />
-        <meta property="og:url" content={`${SITE_URL}/about`} />
-        <meta property="og:type" content="website" />
-      </Head>
+      <PageHead
+        path="/about"
+        title={lang === "es" ? "Sobre mí — josbert" : "About — josbert"}
+        description={
+          lang === "es"
+            ? "¿Quién es Josbert? Ingeniero frontend y desarrollador creativo de Santiago — convierte ideas complejas en cosas que puedes clickear."
+            : "Who's Josbert? Frontend engineer & creative developer from Santiago — turning complex ideas into things you can click."
+        }
+        ogDescription={lang === "es" ? "Ingeniero frontend y desarrollador creativo de Santiago." : "Frontend engineer & creative developer from Santiago."}
+      />
 
       <div className="flex w-full flex-1 justify-between relative z-10">
         <LeftSidebar />
@@ -103,15 +74,14 @@ export default function AboutPage() {
 
               <div className="relative">
                 <span className="font-departure text-ink/70 text-sm tracking-widest">
-                  Senior level
+                  {about.level}
                 </span>
 
                 <h1
                   className="mt-10 max-w-xl text-accent-red text-[34px] md:text-[44px] leading-[1.05]"
                   style={{ fontFamily: '"Awesome Serif Regular", serif' }}
                 >
-                  For the past few years, I&apos;ve been turning complex ideas
-                  into things you can click.
+                  {about.headline}
                 </h1>
 
                 <div className="mt-12 flex flex-col md:flex-row justify-between items-start gap-10">
@@ -120,10 +90,10 @@ export default function AboutPage() {
                     className="text-accent-red text-[22px] leading-relaxed"
                     style={{ fontFamily: '"Gochi Hand", cursive' }}
                   >
-                    <p>I&apos;m a frontend engineer</p>
-                    <p>but I&apos;m also…</p>
+                    <p>{about.intro}</p>
+                    <p>{about.intro_also}</p>
                     <ul className="mt-4 space-y-2">
-                      {ALSO.map((item, i) => (
+                      {about.also.map((item, i) => (
                         <motion.li
                           key={item}
                           initial={{ opacity: 0, x: -8 }}
@@ -147,15 +117,15 @@ export default function AboutPage() {
                     style={{ width: "240px" }}
                   >
                     <img
-                      src="/work-clone/josbert/josbert-photo.png"
-                      alt="Josbert at his desk"
+                      src={about.photo_url}
+                      alt={about.photo_caption}
                       className="w-full aspect-square object-cover grayscale"
                     />
                     <p
                       className="text-center text-accent-red text-[26px] mt-1"
                       style={{ fontFamily: '"Gochi Hand", cursive' }}
                     >
-                      Josbert
+                      {about.photo_caption}
                     </p>
                   </motion.div>
                 </div>
@@ -174,19 +144,18 @@ export default function AboutPage() {
               className="relative z-10 bg-[#f2e3cf] p-6 shadow-xl w-[320px] md:-mr-6"
             >
               <div className="grid grid-cols-2 gap-2">
-                <img src="/work-clone/josbert/wasin-hero.png" alt="wasin" className="h-24 w-full object-cover object-left-top" />
-                <img src="/work-clone/josbert/erp-hero.png" alt="bookforce ERP" className="h-24 w-full object-cover object-left-top" />
-                <img src="/work-clone/josbert/josbert-projects.png" alt="side projects" className="h-24 w-full object-cover object-left-top" />
-                <img src="/work-clone/josbert/erp-pos.png" alt="POS" className="h-24 w-full object-cover object-left-top" />
+                {about.gallery.map((g) => (
+                  <img key={g.src} src={g.src} alt={g.alt} className="h-24 w-full object-cover object-left-top" />
+                ))}
               </div>
               <h2
                 className="mt-4 text-ink text-[22px] italic"
                 style={{ fontFamily: '"Awesome Serif Regular", serif' }}
               >
-                What gives me energy
+                {about.energy_title}
               </h2>
               <ul className="mt-2 text-ink/80 text-[13px] font-mono space-y-1">
-                {ENERGY.map((e) => (
+                {about.energy.map((e) => (
                   <li key={e}>- {e}</li>
                 ))}
               </ul>
@@ -201,20 +170,20 @@ export default function AboutPage() {
               className="relative bg-[#e35342] text-[#f2e3cf] p-7 shadow-xl w-[340px]"
             >
               <h2 className="text-[22px]" style={{ fontFamily: '"Gochi Hand", cursive' }}>
-                What fuels my soul
+                {about.soul_title}
               </h2>
               <ul className="mt-2 text-[15px] space-y-1" style={{ fontFamily: '"Gochi Hand", cursive' }}>
-                {SOUL.map((s) => (
+                {about.soul.map((s) => (
                   <li key={s}>- {s}</li>
                 ))}
               </ul>
 
               <h2 className="mt-6 text-[22px] leading-tight" style={{ fontFamily: '"Gochi Hand", cursive' }}>
-                Stuff that I&apos;ll nerd out on
-                <span className="block text-[13px] opacity-80">(that is not frontend)</span>
+                {about.nerd_title}
+                <span className="block text-[13px] opacity-80">{about.nerd_subtitle}</span>
               </h2>
               <ul className="mt-2 text-[15px] space-y-1" style={{ fontFamily: '"Gochi Hand", cursive' }}>
-                {NERD.map((n) => (
+                {about.nerd.map((n) => (
                   <li key={n.k}>
                     - {n.k} — {n.v}
                   </li>
