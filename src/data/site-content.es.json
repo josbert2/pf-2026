@@ -1,0 +1,50 @@
+{
+  "home": {
+    "role": "Ingeniero Frontend",
+    "role_sub": "y desarrollador creativo",
+    "headline": "El software debería",
+    "headline_lead": "sentirse",
+    "headline_accent": "honesto",
+    "location": "Santiago • GMT -3:00",
+    "values_caption": "3 cosas en las que creo firmemente",
+    "value_1": "buscar la claridad sin descanso.",
+    "value_2": "El software debe empoderar.",
+    "value_3": "Diseñar para momentos",
+    "about_title": "Sobre mí",
+    "about_question": "¿Quién es este tipo?",
+    "about_quote": "Todo lo que hagas, hazlo con cariño."
+  },
+  "about": {
+    "level": "Nivel senior",
+    "headline": "Los últimos años he estado convirtiendo ideas complejas en cosas que puedes clickear.",
+    "intro": "Soy ingeniero frontend",
+    "intro_also": "pero también soy…",
+    "also": [
+      "un desarrollador creativo",
+      "un programador potenciado con IA",
+      "un curioso del ui/ux",
+      "un constructor de SaaS",
+      "un búho nocturno"
+    ],
+    "energy_title": "Lo que me da energía",
+    "energy": [
+      "Construir productos de punta a punta",
+      "Lanzar cosas geniales",
+      "Trabajar en equipos pequeños y unidos"
+    ],
+    "soul_title": "Lo que alimenta mi alma",
+    "soul": ["Sesiones de código de madrugada", "Un buen café", "Crear cosas"],
+    "nerd_title": "Cosas que me apasionan",
+    "nerd_subtitle": "(que no son frontend)",
+    "nerd": [
+      { "k": "Agentes de IA", "v": "la mitad de mis herramientas me responden" },
+      { "k": "Self-hosting", "v": "todo corre en Docker" },
+      { "k": "Stats de Warzone", "v": "mi bot sigue al escuadrón" }
+    ]
+  },
+  "footer": {
+    "checklist_title": "Lo que busco",
+    "checklist": ["Trabajo con impacto", "Trabajo con sentido", "Un equipo diverso de gente talentosa"],
+    "cta_label": "¡hablemos!"
+  }
+}

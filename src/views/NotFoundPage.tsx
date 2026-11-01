@@ -1,7 +1,9 @@
 import { Head } from "vite-react-ssg";
-import { Link } from "react-router-dom";
+import { localePath, useLang, useT } from "../lib/i18n";
 
 export default function NotFoundPage() {
+  const lang = useLang();
+  const t = useT();
   return (
     <div className="min-h-screen flex flex-col items-center justify-center font-mono text-paper px-6 text-center">
       <Head>
@@ -11,16 +13,16 @@ export default function NotFoundPage() {
       <p className="text-[10rem] leading-none font-departure text-accent-red select-none">
         404
       </p>
-      <h1 className="mt-4 text-xl">this page wandered off the desk</h1>
+      <h1 className="mt-4 text-xl">{t("nf_title")}</h1>
       <p className="mt-2 text-sm opacity-60">
-        the route you followed doesn't exist (or never did).
+        {t("nf_body")}
       </p>
-      <Link
-        to="/"
+      <a
+        href={localePath("/", lang)}
         className="mt-8 border border-paper/40 px-5 py-2 text-sm hover:bg-paper hover:text-ink transition-colors"
       >
-        ← back home
-      </Link>
+        {t("nf_back")}
+      </a>
     </div>
   );
 }

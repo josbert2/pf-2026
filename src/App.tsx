@@ -1,5 +1,4 @@
-import { Head } from "vite-react-ssg";
-import { SITE_URL } from "./lib/site";
+import { PageHead, useLang } from "./lib/i18n";
 
 import HeroNotebook from "./components/HeroNotebook";
 import FooterSection from "./components/FooterSection";
@@ -14,24 +13,19 @@ import ValuesSection from "./components/ValuesSection";
 import EmpowerSection from "./components/EmpowerSection";
 
 export default function App() {
+  const lang = useLang();
   return (
     <div className="min-h-screen relative font-mono text-light overflow-hidden flex flex-col">
-      <Head>
-        <title>josbert — frontend engineer &amp; creative developer</title>
-        <meta
-          name="description"
-          content="Portfolio of josbert — frontend engineer and creative developer. Software should empower; design for the moments that matter."
-        />
-        <link rel="canonical" href={SITE_URL} />
-        <meta property="og:title" content="josbert — frontend engineer & creative developer" />
-        <meta
-          property="og:description"
-          content="Software should empower; design for the moments that matter."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={SITE_URL} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      <PageHead
+        path="/"
+        title={lang === "es" ? "josbert — ingeniero frontend y desarrollador creativo" : "josbert — frontend engineer & creative developer"}
+        description={
+          lang === "es"
+            ? "Portafolio de josbert — ingeniero frontend y desarrollador creativo. El software debe empoderar; diseña para los momentos que importan."
+            : "Portfolio of josbert — frontend engineer and creative developer. Software should empower; design for the moments that matter."
+        }
+        ogDescription={lang === "es" ? "El software debe empoderar; diseña para los momentos que importan." : "Software should empower; design for the moments that matter."}
+      />
       <ClickBurst />
       
       {/* Decorative Scattered Stickers */}

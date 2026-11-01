@@ -1,37 +1,31 @@
 import { useEffect, useState } from "react";
-import { Head } from "vite-react-ssg";
 import WorkFull from "../components/work/WorkFull";
-import { fallbackContent, fetchContent, type Content } from "../lib/content";
-import { SITE_URL } from "../lib/site";
+import { fallbackContent, fetchContent, localizeContent, type Content } from "../lib/content";
+import { PageHead, useLang } from "../lib/i18n";
 
 export default function WorkPage() {
   // Prerender/SSG renders with the bundled content; the client then pulls
   // the live version from MySQL (via the API) on mount.
-  const [data, setData] = useState<Content>(fallbackContent);
+  const lang = useLang();
+  const [data, setData] = useState<Content>(() => localizeContent(fallbackContent, lang));
 
   useEffect(() => {
     const ctrl = new AbortController();
-    fetchContent(ctrl.signal).then(setData);
+    fetchContent(ctrl.signal).then((c) => setData(localizeContent(c, lang)));
     return () => ctrl.abort();
-  }, []);
+  }, [lang]);
 
   return (
     <>
-      <Head>
-        <title>Work — josbert</title>
-        <meta
-          name="description"
-          content="Selected work and side quests — places I've been and things I've learnt as a frontend engineer."
-        />
-        <link rel="canonical" href={`${SITE_URL}/work`} />
-        <meta property="og:title" content="Work — josbert" />
-        <meta
-          property="og:description"
-          content="Selected work and side quests — places I've been and things I've learnt."
-        />
-        <meta property="og:url" content={`${SITE_URL}/work`} />
-        <meta property="og:type" content="website" />
-      </Head>
+      <PageHead
+        path="/work"
+        title={lang === "es" ? "Trabajo — josbert" : "Work — josbert"}
+        description={
+          lang === "es"
+            ? "Trabajo seleccionado y proyectos paralelos — lugares donde he estado y cosas que he aprendido como ingeniero frontend."
+            : "Selected work and side quests — places I've been and things I've learnt as a frontend engineer."
+        }
+      />
       <WorkFull data={data} />
     </>
   );

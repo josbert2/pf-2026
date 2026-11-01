@@ -1,11 +1,13 @@
 // @ts-nocheck -- generated Framer export; not hand-typechecked (Vite/esbuild still builds it)
 import React from "react";
+import { useSiteContent } from "../lib/site-content";
 
 /**
  * Converted verbatim from seccion.html (Framer export).
  * Only essential CSS props are kept so this file stays editable.
  */
 export default function AboutSectionFramer() {
+  const home = useSiteContent("home");
   return (
     <div
       data-framer-name="Screenies"
@@ -726,10 +728,11 @@ export default function AboutSectionFramer() {
                   fontSize: "19px",
                   height: "22.7969px",
                   lineHeight: "22.8px",
-                  width: "279.281px",
+                  width: "auto",
+                  whiteSpace: "nowrap",
                 }}
               >
-                Everything you do, do it with care.
+                {home.about_quote}
               </p>
             </div>
           </div>
@@ -1660,7 +1663,6 @@ export default function AboutSectionFramer() {
                 width: "201px",
               }}
             >
-              $
               <a
                 href="./about"
                 style={{
@@ -1752,10 +1754,11 @@ export default function AboutSectionFramer() {
                           fontSize: "16px",
                           height: "19.2031px",
                           lineHeight: "19.2px",
-                          width: "111.188px",
+                          width: "auto",
+                          whiteSpace: "nowrap",
                         }}
                       >
-                        What's his deal?
+                        {home.about_question}
                       </p>
                     </div>
                     <div
@@ -1870,10 +1873,11 @@ export default function AboutSectionFramer() {
                           fontSize: "16px",
                           height: "19.2031px",
                           lineHeight: "19.2px",
-                          width: "63.6406px",
+                          width: "auto",
+                          whiteSpace: "nowrap",
                         }}
                       >
-                        About me
+                        {home.about_title}
                       </p>
                     </div>
                   </div>

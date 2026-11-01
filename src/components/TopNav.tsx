@@ -1,25 +1,39 @@
 import { motion } from "motion/react";
+import { localePath, useLang, useT } from "../lib/i18n";
  
 // Set this to true to force all navigation links to their hover state
 const DEBUG_HOVER = false;
 
 export default function TopNav() {
+  const lang = useLang();
+  const t = useT();
   return (
     <nav className="relative z-50 w-full flex items-center justify-center gap-12 md:gap-16 ">
      
 
       {/* Navigation Links */}
-      <NavLink href="/about" label="about" forceHover={false} />
-      <NavLink href="/work" label="Work" />
-      <NavLink href="#connect" label="Connect" />
+      <NavLink kind="about" href={localePath("/about", lang)} label={t("nav_about")} forceHover={false} />
+      <NavLink kind="work" href={localePath("/work", lang)} label={t("nav_work")} />
+      <NavLink kind="connect" href="#connect" label={t("nav_connect")} />
     </nav>
   );
 }
 
-function NavLink({ href, label, forceHover = false }: { href: string; label: string; forceHover?: boolean }) {
-  const isAbout = label.toLowerCase() === "about";
-  const isWork = label.toLowerCase() === "work";
-  const isConnect = label.toLowerCase() === "connect";
+function NavLink({
+  kind,
+  href,
+  label,
+  forceHover = false,
+}: {
+  kind: "about" | "work" | "connect";
+  href: string;
+  label: string;
+  forceHover?: boolean;
+}) {
+  const lang = useLang();
+  const isAbout = kind === "about";
+  const isWork = kind === "work";
+  const isConnect = kind === "connect";
   const shouldHover = DEBUG_HOVER || forceHover;
   
   return (
@@ -43,7 +57,7 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
            transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
         >
            <a 
-             href="/" 
+             href={localePath("/", lang)} 
              className="block text-paper hover:text-accent-red transition-colors duration-200"
              onClick={(e) => e.stopPropagation()}
            >
@@ -140,7 +154,7 @@ function NavLink({ href, label, forceHover = false }: { href: string; label: str
             transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
           >
             <a 
-              href="/" 
+              href={localePath("/", lang)} 
               className="block text-paper hover:text-accent-red transition-colors duration-200"
               onClick={(e) => e.stopPropagation()}
             >
