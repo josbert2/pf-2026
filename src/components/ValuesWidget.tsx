@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useMotionValue, useScroll, useTransform, type MotionValue } from "motion/react";
 
 const IMG_1 =
   "/work-clone/framer/images/rhT0iPheLHJdGQAZ04lGqNb0I.png";
@@ -8,8 +8,26 @@ const IMG_2 =
 const IMG_3 =
   "/work-clone/framer/images/0aKOwaR29QHg04I7MHlsi9j1g4.png";
 
-export default function ValuesWidget() {
+const deg = (d: number) => (d * Math.PI) / 180;
+
+export default function ValuesWidget({
+  pageTilt,
+  values = ["tirelessly pursue clarity.", "Software should empower.", "Design for moments"],
+}: {
+  pageTilt?: MotionValue<number>;
+  values?: [string, string, string];
+}) {
   const containerRef = useRef(null);
+
+  // While the page is tilted (book half-open), the notes sit bigger and are
+  // stretched back vertically so the tilt doesn't squash them.
+  const fallbackTilt = useMotionValue(10);
+  const tilt = pageTilt ?? fallbackTilt;
+  const notesScale = useTransform(tilt, [10, 60], [1, 1.3]);
+  const notesScaleY = useTransform(tilt, (a) => {
+    const unsquash = Math.cos(deg(10)) / Math.cos(deg(Math.min(a, 75)));
+    return notesScale.get() * (1 + (unsquash - 1) * 0.45);
+  });
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -33,9 +51,18 @@ export default function ValuesWidget() {
 
   return (
     <div ref={containerRef} className="w-full">
-      <div className="sticky top-20 w-full flex items-center justify-center overflow-hidden ">
+      <div className="sticky top-20 w-full flex items-center justify-center">
         {/* Canvas: 670 x 497 */}
-        <div style={{ width: 670, height: 497, position: "relative" }}>
+        <motion.div
+          style={{
+            width: 670,
+            height: 497,
+            position: "relative",
+            scaleX: notesScale,
+            scaleY: notesScaleY,
+            originY: 0.15,
+          }}
+        >
 
           {/* Card 1 — tirelessly pursue clarity. */}
           <motion.div
@@ -92,7 +119,7 @@ export default function ValuesWidget() {
                     margin: 0,
                   }}
                 >
-                  tirelessly pursue clarity.
+                  {values[0]}
                 </p>
               </div>
             </div>
@@ -155,7 +182,7 @@ export default function ValuesWidget() {
                     margin: 0,
                   }}
                 >
-                  Software should empower.
+                  {values[1]}
                 </p>
               </div>
             </div>
@@ -206,6 +233,7 @@ export default function ValuesWidget() {
               >
                 <p
                   style={{
+                    fontFamily: '"Awesome Serif Italic Semi Bold Extra Tall", serif',
                     fontSize: 27,
                     fontWeight: 600,
                     color: "#171717",
@@ -213,13 +241,13 @@ export default function ValuesWidget() {
                     margin: 0,
                   }}
                 >
-                  Design for moments
+                  {values[2]}
                 </p>
               </div>
             </div>
           </motion.div>
 
-        </div>
+        </motion.div>
       </div>
     </div>
   );

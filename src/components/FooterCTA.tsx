@@ -50,7 +50,7 @@ export default function FooterCTA() {
           transition={{ delay: 0.2 }}
         >
           <a
-            href="mailto:hello@jackiezhang.co.za"
+            href="mailto:joheandroid@gmail.com"
             className="group relative inline-flex items-center justify-center gap-4 px-8 py-5 text-lg font-bold text-[#E35342] border-2 border-[#E35342] rounded-full overflow-hidden transition-all hover:text-paper"
           >
             <span className="absolute inset-0 w-full h-full bg-[#E35342] transform -translate-x-full ease-out duration-300 group-hover:translate-x-0" />

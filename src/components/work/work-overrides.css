@@ -1,0 +1,14 @@
+/* Hand-written interactions the static Framer export can't express.
+   Loaded after work-inline.css (generated). */
+
+/* Notable-work preview card: hidden ("None selected") until the list is hovered. */
+.framer-SFaF0 .framer-vcllzp > .framer-b19sbf-container {
+  transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.framer-SFaF0:hover .framer-vcllzp > .framer-b19sbf-container {
+  opacity: 1 !important;
+  transform: perspective(1200px) rotate(-3deg) !important;
+}
+.framer-h1nwjz .sq-links { margin-top: 6px !important; font-family: "Departure Mono", monospace !important; font-size: 11px !important; letter-spacing: 0.02em; }
+.framer-h1nwjz .sq-link { color: #e35342 !important; text-decoration: none !important; }
+.framer-h1nwjz .sq-link:hover { text-decoration: underline !important; }
