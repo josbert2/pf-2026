@@ -12,3 +12,10 @@
 .framer-h1nwjz .sq-links { margin-top: 6px !important; font-family: "Departure Mono", monospace !important; font-size: 11px !important; letter-spacing: 0.02em; }
 .framer-h1nwjz .sq-link { color: #e35342 !important; text-decoration: none !important; }
 .framer-h1nwjz .sq-link:hover { text-decoration: underline !important; }
+
+/* side quest pager: same voice as the web/github links */
+.sq-pager { display: flex; align-items: center; gap: 16px; margin-top: 8px; font-family: "Departure Mono", monospace; font-size: 11px; letter-spacing: 0.02em; color: #8a8a8a; }
+.sq-pager button { all: unset; cursor: pointer; color: #e35342; }
+.sq-pager button:hover:not(:disabled) { text-decoration: underline; }
+.sq-pager button:focus-visible { outline: 1px solid #e35342; outline-offset: 3px; }
+.sq-pager button:disabled { color: #c4c4c4; cursor: default; }
